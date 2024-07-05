@@ -8,6 +8,24 @@ class UserDef {
     
     private let defaults = UserDefaults.standard
     
+    var scorePoints: Int {
+        get {
+            return defaults.integer(forKey: "scorePoints", defaultValue: 1500)
+        }
+        set {
+            defaults.set(newValue, forKey: "scorePoints")
+        }
+    }
+    
+    var lastBonusDate: Date? {
+        get {
+            return defaults.object(forKey: "lastBonusDate") as? Date
+        }
+        set {
+            defaults.set(newValue, forKey: "lastBonusDate")
+        }
+    }
+    
     var userName: String? {
         get {
             return defaults.string(forKey: "userName")

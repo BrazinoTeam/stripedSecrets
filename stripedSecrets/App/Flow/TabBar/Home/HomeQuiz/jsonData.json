@@ -1,0 +1,2005 @@
+//
+//  jsonData.swift
+
+{
+    "Tigers": [
+        {
+            "id": 0,
+            "name": "Indochinese Tiger",
+            "photoName": "cat1",
+            "info": "catinfo1",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the Indochinese tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera tigris altaica",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris sumatrae",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris corbetti",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Which countries historically had populations of Indochinese tigers?",
+                        "variants": [
+                            {
+                                "text": "India and Sri Lanka",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Russia and Mongolia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Thailand, Myanmar, Laos, Vietnam, Cambodia, and southwestern China",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Malaysia and Indonesia",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What has been a major factor in the decline of Indochinese tiger populations?",
+                        "variants": [
+                            {
+                                "text": "Increased tiger populations",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Habitat destruction and fragmentation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the weight range for female Indochinese tigers?",
+                        "variants": [
+                            {
+                                "text": "50-100 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "150-200 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "100-130 kilograms",
+                                "isRight": true
+                            },
+                            {
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What types of habitats do Indochinese tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts and tundras",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Coastal regions",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Tropical and subtropical forests, grasslands, and mangrove swamps",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Urban areas",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is a primary component of the Indochinese tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer, wild pigs, and cattle",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Insects and small rodents",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the Indochinese tiger?",
+                        "variants": [
+                            {
+                                "text": "Least Concern",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What conservation measure is NOT commonly implemented for Indochinese tigers?",
+                        "variants": [
+                            {
+                                "text": "Anti-poaching efforts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Community-based conservation initiatives",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Habitat restoration projects",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Introducing tigers to new countries",
+                                "isRight": true
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How many Indochinese tigers are estimated to remain in the wild?",
+                        "variants": [
+                            {
+                                "text": "A few thousand",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Less than fifty",
+                                "isRight": false
+                            },
+                            {
+                                "text": "A few hundred",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Over ten thousand",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What ecological role do Indochinese tigers play?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1,
+            "name": "Bengal Tiger",
+            "photoName": "cat2",
+            "info": "",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the Bengal tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera leo",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera onca",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris tigris",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera pardus",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Which countries are home to Bengal tigers?",
+                        "variants": [
+                            {
+                                "text": "India, Bangladesh, Nepal, Bhutan, and Myanmar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Thailand and Vietnam",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Russia and Mongolia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "China and Japan",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary threat to Bengal tigers?",
+                        "variants": [
+                            {
+                                "text": "Overpopulation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Habitat destruction and poaching",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of habitat do Bengal tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Arctic tundra",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Grasslands and forests",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Coastal regions",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is a primary component of the Bengal tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Insects and small rodents",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the Bengal tiger?",
+                        "variants": [
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Least Concern",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How many Bengal tigers are estimated to remain in the wild?",
+                        "variants": [
+                            {
+                                "text": "Over 10,000",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Less than 100",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Around 2,500",
+                                "isRight": false
+                            },
+                            {
+                                "text": "More than 50,000",
+                                "isRight": true
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What role do Bengal tigers play in their ecosystems?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What unique adaptation do Sundarbans tigers have?",
+                        "variants": [
+                            {
+                                "text": "Ability to fly",
+                                "isRight": false
+                            },
+                            {
+                                "text": "No need for water",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Adapted to living in swampy, mangrove environments",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Herbivorous diet",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Why is protecting Bengal tigers important?",
+                        "variants": [
+                            {
+                                "text": "They are important pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They are a primary food source for humans",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They maintain ecological balance and biodiversity",
+                                "isRight": true
+                            },
+                            {
+                                "text": "They are pests that need to be controlled",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "name": "Sumatran Tiger",
+            "photoName": "cat2",
+            "info": "",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the Sumatran tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera tigris altaica",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris sumatrae",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera tigris corbetti",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Where are Sumatran tigers primarily found?",
+                        "variants": [
+                            {
+                                "text": "India",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Siberia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Sumatra",
+                                "isRight": true
+                            },
+                            {
+                                "text": "China",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary threat to the survival of Sumatran tigers?",
+                        "variants": [
+                            {
+                                "text": "Overpopulation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Habitat loss and poaching",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the typical weight range for male Sumatran tigers?",
+                        "variants": [
+                            {
+                                "text": "50-75 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "150-200 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "100-140 kilograms",
+                                "isRight": true
+                            },
+                            {
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of habitats do Sumatran tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Lowland and montane forests, peat swamps, and freshwater swamp forests",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Grasslands",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Urban areas",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is a primary component of the Sumatran tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the Sumatran tiger?",
+                        "variants": [
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Least Concern",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How many Sumatran tigers are estimated to remain in the wild?",
+                        "variants": [
+                            {
+                                "text": "Over 10,000",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Less than 50",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Around 400",
+                                "isRight": true
+                            },
+                            {
+                                "text": "More than 5,000",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What ecological role do Sumatran tigers play?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Why is protecting Sumatran tigers important?",
+                        "variants": [
+                            {
+                                "text": "They are important pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They are a primary food source for humans",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They maintain ecological balance and biodiversity",
+                                "isRight": true
+                            },
+                            {
+                                "text": "They are pests that need to be controlled",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "name": "Amur (Siberian) Tiger",
+            "photoName": "cat2",
+            "info": "",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the Amur tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera tigris altaica",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera tigris sumatrae",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris corbetti",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Where are Amur tigers primarily found?",
+                        "variants": [
+                            {
+                                "text": "India",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Sumatra",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Russian Far East and northeastern China",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Thailand",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary threat to the survival of Amur tigers?",
+                        "variants": [
+                            {
+                                "text": "Overpopulation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Habitat destruction and poaching",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the typical weight range for male Amur tigers?",
+                        "variants": [
+                            {
+                                "text": "50-75 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "150-320 kilograms",
+                                "isRight": true
+                            },
+                            {
+                                "text": "100-140 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of habitats do Amur tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Temperate forests and mountainous regions",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Grasslands",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Urban areas",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is a primary component of the Amur tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Insects and small rodents",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the Amur tiger?",
+                        "variants": [
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Least Concern",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How many Amur tigers are estimated to remain in the wild?",
+                        "variants": [
+                            {
+                                "text": "Over 10,000",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Less than 50",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Around 500",
+                                "isRight": true
+                            },
+                            {
+                                "text": "More than 5,000",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What ecological role do Amur tigers play?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Why is protecting Amur tigers important?",
+                        "variants": [
+                            {
+                                "text": "They are important pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They are a primary food source for humans",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They maintain ecological balance and biodiversity",
+                                "isRight": true
+                            },
+                            {
+                                "text": "They are pests that need to be controlled",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "name": "Malayan Tiger",
+            "photoName": "cat2",
+            "info": "",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the Malayan tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera tigris altaica",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera tigris corbetti",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris sumatrae",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Where are Malayan tigers primarily found?",
+                        "variants": [
+                            {
+                                "text": "India",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Siberia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Malay Peninsula",
+                                "isRight": true
+                            },
+                            {
+                                "text": "China",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary threat to the survival of Malayan tigers?",
+                        "variants": [
+                            {
+                                "text": "Overpopulation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Habitat loss and poaching",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the typical weight range for male Malayan tigers?",
+                        "variants": [
+                            {
+                                "text": "50-75 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "150-200 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "100-120 kilograms",
+                                "isRight": true
+                            },
+                            {
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of habitats do Malayan tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Tropical and subtropical forests, grasslands, and swampy areas",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Grasslands",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Urban areas",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is a primary component of the Malayan tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Insects and small rodents",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the Malayan tiger?",
+                        "variants": [
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Least Concern",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How many Malayan tigers are estimated to remain in the wild?",
+                        "variants": [
+                            {
+                                "text": "Over 10,000",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Less than 50",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fewer than 200",
+                                "isRight": true
+                            },
+                            {
+                                "text": "More than 5,000",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What ecological role do Malayan tigers play?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Why is protecting Malayan tigers important?",
+                        "variants": [
+                            {
+                                "text": "They are important pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They are a primary food source for humans",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They maintain ecological balance and biodiversity",
+                                "isRight": true
+                            },
+                            {
+                                "text": "They are pests that need to be controlled",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "name": "South China Tiger",
+            "photoName": "cat2",
+            "info": "",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the South China tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera tigris altaica",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris amoyensis",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera tigris corbetti",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Where were South China tigers historically found?",
+                        "variants": [
+                            {
+                                "text": "India",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Siberia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Southern China",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Sumatra",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary threat to the survival of South China tigers?",
+                        "variants": [
+                            {
+                                "text": "Overpopulation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Habitat loss and poaching",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the typical weight range for male South China tigers?",
+                        "variants": [
+                            {
+                                "text": "50-75 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "150-200 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "110-150 kilograms",
+                                "isRight": true
+                            },
+                            {
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of habitats do South China tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Forests and grasslands",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Grasslands",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Urban areas",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is a primary component of the South China tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Insects and small rodents",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the South China tige?",
+                        "variants": [
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Least Concern",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How many South China tigers are estimated to remain in the wild?",
+                        "variants": [
+                            {
+                                "text": "Over 10,000",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Less than 50",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fewer than 30",
+                                "isRight": true
+                            },
+                            {
+                                "text": "More than 5,000",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What ecological role do South China tigers play?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Why is protecting South China tigers important?",
+                        "variants": [
+                            {
+                                "text": "They are important pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They are a primary food source for humans",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They maintain ecological balance and biodiversity",
+                                "isRight": true
+                            },
+                            {
+                                "text": "They are pests that need to be controlled",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "name": "Caspian Tiger",
+            "photoName": "cat2",
+            "info": "",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the Caspian tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera tigris altaica",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris virgata",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera tigris corbetti",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Where were Caspian tigers historically found?",
+                        "variants": [
+                            {
+                                "text": "India",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Siberia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Central Asia and near the Caspian Sea",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Sumatra",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary reason for the extinction of Caspian tigers?",
+                        "variants": [
+                            {
+                                "text": "Overpopulation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Habitat loss and poaching",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What was the typical weight range for male Caspian tigers?",
+                        "variants": [
+                            {
+                                "text": "50-75 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "150-240 kilograms",
+                                "isRight": true
+                            },
+                            {
+                                "text": "85-135 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of habitats did Caspian tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Grasslands",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Riverine forests, reed thickets, and mountain valleys",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Urban areas",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What was a primary component of the Caspian tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Insects and small rodents",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the Caspian tiger?",
+                        "variants": [
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Extinct",
+                                "isRight": true
+                            }
+                        ]
+                    },
+                    {
+                        "question": "When was the last confirmed sighting of a Caspian tiger in the wild?",
+                        "variants": [
+                            {
+                                "text": "1950s",
+                                "isRight": false
+                            },
+                            {
+                                "text": "1970s",
+                                "isRight": true
+                            },
+                            {
+                                "text": "1960s",
+                                "isRight": false
+                            },
+                            {
+                                "text": "1980s",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What ecological role did Caspian tigers play?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Why is the story of the Caspian tiger significant for conservation efforts?",
+                        "variants": [
+                            {
+                                "text": "It shows that extinction is inevitable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "It suggests that hunting should be increased",
+                                "isRight": false
+                            },
+                            {
+                                "text": "It highlights the importance of protecting top predators to preserve biodiversity",
+                                "isRight": true
+                            },
+                            {
+                                "text": "It indicates that human activities have no impact on wildlife",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "name": "Bali Tiger",
+            "photoName": "cat2",
+            "info": "",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the Bali tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera tigris altaica",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris balica",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera tigris corbetti",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Where were Bali tigers historically found?",
+                        "variants": [
+                            {
+                                "text": "India",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Siberia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Bali",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Sumatra",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary reason for the extinction of Bali tigers?",
+                        "variants": [
+                            {
+                                "text": "Overpopulation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Hunting and habitat destruction",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What was the typical weight range for male Bali tigers?",
+                        "variants": [
+                            {
+                                "text": "50-75 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "150-200 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "90-100 kilograms",
+                                "isRight": true
+                            },
+                            {
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of habitats did Bali tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Grasslands",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Forests and grasslands",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Urban areas",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What was a primary component of the Bali tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Insects and small rodents",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the Bali tiger?",
+                        "variants": [
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Extinct",
+                                "isRight": true
+                            }
+                        ]
+                    },
+                    {
+                        "question": "When was the last confirmed sighting of a Bali tiger in the wild?",
+                        "variants": [
+                            {
+                                "text": "1920s",
+                                "isRight": false
+                            },
+                            {
+                                "text": "1940s",
+                                "isRight": false
+                            },
+                            {
+                                "text": "1930s",
+                                "isRight": true
+                            },
+                            {
+                                "text": "1950s",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What ecological role did Bali tigers play?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Why is the story of the Bali tiger significant for conservation efforts?",
+                        "variants": [
+                            {
+                                "text": "It shows that extinction is inevitable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "It suggests that hunting should be increased",
+                                "isRight": false
+                            },
+                            {
+                                "text": "It highlights the importance of protecting top predators to preserve biodiversity",
+                                "isRight": true
+                            },
+                            {
+                                "text": "It indicates that human activities have no impact on wildlife",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "name": "Beechcraft King Air",
+            "photoName": "cat10",
+            "info": "catinfo10",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What type of engines power the Beechcraft King Air?",
+                        "variants": [
+                            {
+                                "text": "Single piston engines",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Quad turbofan engines",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Twin-turboprop engines",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Triple turboshaft engines",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How many occupants can the cabin of the Beechcraft King Air accommodate?",
+                        "variants": [
+                            {
+                                "text": "Up to 5 occupants",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Up to 15 occupants",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Up to 10 occupants",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Up to 20 occupants",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary purpose of the Beechcraft King Air?",
+                        "variants": [
+                            {
+                                "text": "Crop dusting",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Executive transport",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Military combat",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Airshow performances",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of cockpit layout does the Beechcraft King Air feature?",
+                        "variants": [
+                            {
+                                "text": "Analog cockpit",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Glass cockpit",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Manual cockpit",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Digital cockpit",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How many engines provide power to the Beechcraft King Air?",
+                        "variants": [
+                            {
+                                "text": "One engine",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Three engines",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Two engines",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Four engines",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is one of the notable features of the Beechcraft King Air's cabin?",
+                        "variants": [
+                            {
+                                "text": "Limited space",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Spacious and luxurious interior",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Lack of amenities",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Uncomfortable seating",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is a key strength of the Beechcraft King Air in terms of its operating capabilities?",
+                        "variants": [
+                            {
+                                "text": "Limited range",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Versatility in different missions and environments",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Inability to operate from short airstrips",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Lack of reliability",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of construction does the Beechcraft King Air feature?",
+                        "variants": [
+                            {
+                                "text": "Fragile construction",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Limited durability",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Rugged construction",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Weak construction",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is one of the notable applications of the Beechcraft King Air in addition to executive transport?",
+                        "variants": [
+                            {
+                                "text": "Law enforcement surveillance",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Underwater research",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Space exploration",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Desert racing",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is one of the enduring characteristics of the Beechcraft King Air?",
+                        "variants": [
+                            {
+                                "text": "Forgotten in aviation history",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Revered as a reliable and versatile aircraft",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Limited popularity",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Minimal impact on aviation development",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

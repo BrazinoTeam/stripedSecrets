@@ -29,16 +29,16 @@ class LoadingVC: UIViewController {
             self.loadignViewModel.isAnimating = true
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-//            self.loadTabBar()
+            self.loadTabBar()
         }
     }
     
-//    func loadTabBar() {
-//        
-//        let vc = TabBar()
-//        let navigationController = UINavigationController(rootViewController: vc)
-//        navigationController.modalPresentationStyle = .fullScreen
-//        present(navigationController, animated: true)
-//    }
+    func loadTabBar() {
+        
+        let vc = TabBar()
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
+    }
     
 }

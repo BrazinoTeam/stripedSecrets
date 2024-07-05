@@ -7,14 +7,12 @@ import UIKit
 extension UIFont {
     
     enum CustomFonts: String {
-        case aclonica = "Aclonica"
-        case archivo = "Archivo"
+        case joti = "JotiOne"
         case inter = "Inter"
     }
     
     enum CustomFontStyle: String {
         case regular = "-Regular"
-        case thin = "-Thin"
         case bold = "-Bold"
     }
     

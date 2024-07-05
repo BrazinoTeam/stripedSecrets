@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180F455E2C38240800102D48 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F455D2C38240800102D48 /* TabBar.swift */; };
+		180F45602C38241000102D48 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F455F2C38241000102D48 /* AboutUsVC.swift */; };
+		180F45622C38241500102D48 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F45612C38241500102D48 /* AboutUsView.swift */; };
+		180F45642C38241B00102D48 /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F45632C38241B00102D48 /* RatingVC.swift */; };
+		180F45662C38241F00102D48 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F45652C38241F00102D48 /* RatingView.swift */; };
+		180F45682C38243C00102D48 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F45672C38243C00102D48 /* HomeVC.swift */; };
+		180F456A2C38244000102D48 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F45692C38244000102D48 /* HomeView.swift */; };
+		180F456C2C38244D00102D48 /* BonusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F456B2C38244D00102D48 /* BonusVC.swift */; };
+		180F456E2C38245000102D48 /* BonusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F456D2C38245000102D48 /* BonusView.swift */; };
+		180F45702C38245600102D48 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F456F2C38245600102D48 /* ProfileVC.swift */; };
+		180F45722C38245B00102D48 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F45712C38245B00102D48 /* ProfileView.swift */; };
+		180F45742C3825D100102D48 /* JotiOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 180F45732C3825D100102D48 /* JotiOne-Regular.ttf */; };
+		180F45762C3825FA00102D48 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 180F45752C3825FA00102D48 /* Inter-Regular.ttf */; };
+		180F45782C38260200102D48 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 180F45772C38260200102D48 /* Inter-Bold.ttf */; };
+		180F457C2C3831D100102D48 /* HomeQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F457B2C3831D100102D48 /* HomeQuizVC.swift */; };
+		180F457E2C3831D500102D48 /* HomeQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F457D2C3831D500102D48 /* HomeQuizView.swift */; };
+		180F45802C3831F200102D48 /* TigerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180F457F2C3831F200102D48 /* TigerModel.swift */; };
+		180F45862C38324900102D48 /* jsonData.json in Sources */ = {isa = PBXBuildFile; fileRef = 180F45852C38324900102D48 /* jsonData.json */; };
 		1811732C2C36E074009A90A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811732B2C36E074009A90A2 /* AppDelegate.swift */; };
 		1811732E2C36E074009A90A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811732D2C36E074009A90A2 /* SceneDelegate.swift */; };
 		181173352C36E076009A90A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181173342C36E076009A90A2 /* Assets.xcassets */; };
@@ -23,6 +41,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180F455D2C38240800102D48 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		180F455F2C38241000102D48 /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
+		180F45612C38241500102D48 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		180F45632C38241B00102D48 /* RatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
+		180F45652C38241F00102D48 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		180F45672C38243C00102D48 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		180F45692C38244000102D48 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		180F456B2C38244D00102D48 /* BonusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusVC.swift; sourceTree = "<group>"; };
+		180F456D2C38245000102D48 /* BonusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusView.swift; sourceTree = "<group>"; };
+		180F456F2C38245600102D48 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		180F45712C38245B00102D48 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		180F45732C3825D100102D48 /* JotiOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JotiOne-Regular.ttf"; sourceTree = "<group>"; };
+		180F45752C3825FA00102D48 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		180F45772C38260200102D48 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		180F457B2C3831D100102D48 /* HomeQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeQuizVC.swift; sourceTree = "<group>"; };
+		180F457D2C3831D500102D48 /* HomeQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeQuizView.swift; sourceTree = "<group>"; };
+		180F457F2C3831F200102D48 /* TigerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TigerModel.swift; sourceTree = "<group>"; };
+		180F45852C38324900102D48 /* jsonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jsonData.json; sourceTree = "<group>"; };
 		181173282C36E074009A90A2 /* stripedSecrets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stripedSecrets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1811732B2C36E074009A90A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1811732D2C36E074009A90A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +87,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180F455B2C3823EB00102D48 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				180F45632C38241B00102D48 /* RatingVC.swift */,
+				180F45652C38241F00102D48 /* RatingView.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		180F455C2C3823F600102D48 /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				180F455F2C38241000102D48 /* AboutUsVC.swift */,
+				180F45612C38241500102D48 /* AboutUsView.swift */,
+			);
+			path = AboutUs;
+			sourceTree = "<group>";
+		};
+		180F45792C3831B200102D48 /* HomeInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeInfo;
+			sourceTree = "<group>";
+		};
+		180F457A2C3831BD00102D48 /* HomeQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				180F457B2C3831D100102D48 /* HomeQuizVC.swift */,
+				180F457D2C3831D500102D48 /* HomeQuizView.swift */,
+				180F457F2C3831F200102D48 /* TigerModel.swift */,
+				180F45852C38324900102D48 /* jsonData.json */,
+			);
+			path = HomeQuiz;
+			sourceTree = "<group>";
+		};
 		1811731F2C36E074009A90A2 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +182,9 @@
 		181173422C36E09F009A90A2 /* UIFont */ = {
 			isa = PBXGroup;
 			children = (
+				180F45772C38260200102D48 /* Inter-Bold.ttf */,
+				180F45752C3825FA00102D48 /* Inter-Regular.ttf */,
+				180F45732C3825D100102D48 /* JotiOne-Regular.ttf */,
 			);
 			name = UIFont;
 			sourceTree = "<group>";
@@ -139,6 +214,9 @@
 		181173452C36E0BF009A90A2 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				180F455D2C38240800102D48 /* TabBar.swift */,
+				180F455C2C3823F600102D48 /* AboutUs */,
+				180F455B2C3823EB00102D48 /* Rating */,
 				181173482C36E0D3009A90A2 /* Home */,
 				181173472C36E0CE009A90A2 /* Bonus */,
 				181173462C36E0C7009A90A2 /* Profile */,
@@ -149,6 +227,8 @@
 		181173462C36E0C7009A90A2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				180F456F2C38245600102D48 /* ProfileVC.swift */,
+				180F45712C38245B00102D48 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -156,6 +236,8 @@
 		181173472C36E0CE009A90A2 /* Bonus */ = {
 			isa = PBXGroup;
 			children = (
+				180F456B2C38244D00102D48 /* BonusVC.swift */,
+				180F456D2C38245000102D48 /* BonusView.swift */,
 			);
 			path = Bonus;
 			sourceTree = "<group>";
@@ -163,6 +245,10 @@
 		181173482C36E0D3009A90A2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				180F45672C38243C00102D48 /* HomeVC.swift */,
+				180F45692C38244000102D48 /* HomeView.swift */,
+				180F45792C3831B200102D48 /* HomeInfo */,
+				180F457A2C3831BD00102D48 /* HomeQuiz */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -231,7 +317,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180F45742C3825D100102D48 /* JotiOne-Regular.ttf in Resources */,
+				180F45782C38260200102D48 /* Inter-Bold.ttf in Resources */,
 				181173352C36E076009A90A2 /* Assets.xcassets in Resources */,
+				180F45762C3825FA00102D48 /* Inter-Regular.ttf in Resources */,
 				181173382C36E076009A90A2 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,15 +332,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180F45702C38245600102D48 /* ProfileVC.swift in Sources */,
 				181173532C36EE0F009A90A2 /* Double + Extension.swift in Sources */,
+				180F456E2C38245000102D48 /* BonusView.swift in Sources */,
 				181173512C36EE05009A90A2 /* Extension + View.swift in Sources */,
+				180F45862C38324900102D48 /* jsonData.json in Sources */,
+				180F456C2C38244D00102D48 /* BonusVC.swift in Sources */,
+				180F457E2C3831D500102D48 /* HomeQuizView.swift in Sources */,
 				1811732C2C36E074009A90A2 /* AppDelegate.swift in Sources */,
+				180F45802C3831F200102D48 /* TigerModel.swift in Sources */,
+				180F45662C38241F00102D48 /* RatingView.swift in Sources */,
 				1811732E2C36E074009A90A2 /* SceneDelegate.swift in Sources */,
+				180F456A2C38244000102D48 /* HomeView.swift in Sources */,
 				181173592C36EE65009A90A2 /* LoadingScreen.swift in Sources */,
 				181173552C36EE18009A90A2 /* Font + Extension.swift in Sources */,
 				1811734D2C36EDB0009A90A2 /* LoadingVC.swift in Sources */,
 				181173572C36EE2E009A90A2 /* UserDef.swift in Sources */,
+				180F45682C38243C00102D48 /* HomeVC.swift in Sources */,
+				180F455E2C38240800102D48 /* TabBar.swift in Sources */,
 				1811735B2C36EE76009A90A2 /* LoadingScreenViewModel.swift in Sources */,
+				180F45602C38241000102D48 /* AboutUsVC.swift in Sources */,
+				180F45642C38241B00102D48 /* RatingVC.swift in Sources */,
+				180F45622C38241500102D48 /* AboutUsView.swift in Sources */,
+				180F45722C38245B00102D48 /* ProfileView.swift in Sources */,
+				180F457C2C3831D100102D48 /* HomeQuizVC.swift in Sources */,
 				1811735D2C36EE84009A90A2 /* ProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,6 +38,12 @@
 		181173592C36EE65009A90A2 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181173582C36EE65009A90A2 /* LoadingScreen.swift */; };
 		1811735B2C36EE76009A90A2 /* LoadingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811735A2C36EE76009A90A2 /* LoadingScreenViewModel.swift */; };
 		1811735D2C36EE84009A90A2 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1811735C2C36EE84009A90A2 /* ProgressBarView.swift */; };
+		182565812C3C07B7005C982B /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182565802C3C07B7005C982B /* HomeCell.swift */; };
+		182565832C3C101E005C982B /* HomeInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182565822C3C101E005C982B /* HomeInfoVC.swift */; };
+		182565852C3C1022005C982B /* HomeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182565842C3C1022005C982B /* HomeInfoView.swift */; };
+		182565872C3C24AB005C982B /* SofiaSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 182565862C3C24AB005C982B /* SofiaSans-Black.ttf */; };
+		182565892C3C24B5005C982B /* SofiaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 182565882C3C24B5005C982B /* SofiaSans-Regular.ttf */; };
+		1825658B2C3C24BF005C982B /* SofiaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1825658A2C3C24BF005C982B /* SofiaSans-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +79,12 @@
 		181173582C36EE65009A90A2 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		1811735A2C36EE76009A90A2 /* LoadingScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewModel.swift; sourceTree = "<group>"; };
 		1811735C2C36EE84009A90A2 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		182565802C3C07B7005C982B /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		182565822C3C101E005C982B /* HomeInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoVC.swift; sourceTree = "<group>"; };
+		182565842C3C1022005C982B /* HomeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoView.swift; sourceTree = "<group>"; };
+		182565862C3C24AB005C982B /* SofiaSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SofiaSans-Black.ttf"; sourceTree = "<group>"; };
+		182565882C3C24B5005C982B /* SofiaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SofiaSans-Regular.ttf"; sourceTree = "<group>"; };
+		1825658A2C3C24BF005C982B /* SofiaSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SofiaSans-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +120,8 @@
 		180F45792C3831B200102D48 /* HomeInfo */ = {
 			isa = PBXGroup;
 			children = (
+				182565822C3C101E005C982B /* HomeInfoVC.swift */,
+				182565842C3C1022005C982B /* HomeInfoView.swift */,
 			);
 			path = HomeInfo;
 			sourceTree = "<group>";
@@ -182,6 +196,9 @@
 		181173422C36E09F009A90A2 /* UIFont */ = {
 			isa = PBXGroup;
 			children = (
+				1825658A2C3C24BF005C982B /* SofiaSans-Light.ttf */,
+				182565862C3C24AB005C982B /* SofiaSans-Black.ttf */,
+				182565882C3C24B5005C982B /* SofiaSans-Regular.ttf */,
 				180F45772C38260200102D48 /* Inter-Bold.ttf */,
 				180F45752C3825FA00102D48 /* Inter-Regular.ttf */,
 				180F45732C3825D100102D48 /* JotiOne-Regular.ttf */,
@@ -247,6 +264,7 @@
 			children = (
 				180F45672C38243C00102D48 /* HomeVC.swift */,
 				180F45692C38244000102D48 /* HomeView.swift */,
+				182565802C3C07B7005C982B /* HomeCell.swift */,
 				180F45792C3831B200102D48 /* HomeInfo */,
 				180F457A2C3831BD00102D48 /* HomeQuiz */,
 			);
@@ -318,9 +336,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				180F45742C3825D100102D48 /* JotiOne-Regular.ttf in Resources */,
+				182565892C3C24B5005C982B /* SofiaSans-Regular.ttf in Resources */,
 				180F45782C38260200102D48 /* Inter-Bold.ttf in Resources */,
+				1825658B2C3C24BF005C982B /* SofiaSans-Light.ttf in Resources */,
 				181173352C36E076009A90A2 /* Assets.xcassets in Resources */,
 				180F45762C3825FA00102D48 /* Inter-Regular.ttf in Resources */,
+				182565872C3C24AB005C982B /* SofiaSans-Black.ttf in Resources */,
 				181173382C36E076009A90A2 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,11 +355,14 @@
 			files = (
 				180F45702C38245600102D48 /* ProfileVC.swift in Sources */,
 				181173532C36EE0F009A90A2 /* Double + Extension.swift in Sources */,
+				182565832C3C101E005C982B /* HomeInfoVC.swift in Sources */,
 				180F456E2C38245000102D48 /* BonusView.swift in Sources */,
 				181173512C36EE05009A90A2 /* Extension + View.swift in Sources */,
 				180F45862C38324900102D48 /* jsonData.json in Sources */,
 				180F456C2C38244D00102D48 /* BonusVC.swift in Sources */,
+				182565812C3C07B7005C982B /* HomeCell.swift in Sources */,
 				180F457E2C3831D500102D48 /* HomeQuizView.swift in Sources */,
+				182565852C3C1022005C982B /* HomeInfoView.swift in Sources */,
 				1811732C2C36E074009A90A2 /* AppDelegate.swift in Sources */,
 				180F45802C3831F200102D48 /* TigerModel.swift in Sources */,
 				180F45662C38241F00102D48 /* RatingView.swift in Sources */,

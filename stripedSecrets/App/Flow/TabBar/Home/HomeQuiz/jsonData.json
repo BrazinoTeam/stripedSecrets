@@ -1781,7 +1781,229 @@
         },
         {
             "id": 8,
-            "name": "Beechcraft King Air",
+            "name": "Javan Tiger",
+            "photoName": "cat2",
+            "info": "",
+            "infoDurationMinutes": 10,
+            "quiz": {
+                "quizDurationMinutes": 5,
+                "questions": [
+                    {
+                        "question": "What is the scientific name of the Javan tiger?",
+                        "variants": [
+                            {
+                                "text": "Panthera tigris altaica",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris sondaica",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Panthera tigris corbetti",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Where were Javan tigers historically found?",
+                        "variants": [
+                            {
+                                "text": "India",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Siberia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Java",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Sumatra",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What is the primary reason for the extinction of Javan tigers?",
+                        "variants": [
+                            {
+                                "text": "Overpopulation",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Hunting and habitat destruction",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Natural predators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Climate change",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What was the typical weight range for male Javan tigers?",
+                        "variants": [
+                            {
+                                "text": "50-75 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "150-200 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "100-140 kilograms",
+                                "isRight": true
+                            },
+                            {
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What type of habitats did Javan tigers prefer?",
+                        "variants": [
+                            {
+                                "text": "Deserts",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Grasslands",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Forests and grasslands",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Urban areas",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What was a primary component of the Javan tiger's diet?",
+                        "variants": [
+                            {
+                                "text": "Fruits and berries",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Insects and small rodents",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "How does the IUCN classify the Javan tiger?",
+                        "variants": [
+                            {
+                                "text": "Vulnerable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Critically Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Extinct",
+                                "isRight": true
+                            }
+                        ]
+                    },
+                    {
+                        "question": "When was the last confirmed sighting of a Javan tiger in the wild?",
+                        "variants": [
+                            {
+                                "text": "1920s",
+                                "isRight": false
+                            },
+                            {
+                                "text": "1940s",
+                                "isRight": false
+                            },
+                            {
+                                "text": "1930s",
+                                "isRight": false
+                            },
+                            {
+                                "text": "1970s",
+                                "isRight": true
+                            }
+                        ]
+                    },
+                    {
+                        "question": "What ecological role did Javan tigers play?",
+                        "variants": [
+                            {
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
+                                "isRight": true
+                            },
+                            {
+                                "text": "Seed dispersers",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Decomposers",
+                                "isRight": false
+                            }
+                        ]
+                    },
+                    {
+                        "question": "Why is the story of the Javan tiger significant for conservation efforts?",
+                        "variants": [
+                            {
+                                "text": "It shows that extinction is inevitable",
+                                "isRight": false
+                            },
+                            {
+                                "text": "It suggests that hunting should be increased",
+                                "isRight": false
+                            },
+                            {
+                                "text": "It highlights the importance of protecting top predators to preserve biodiversity",
+                                "isRight": true
+                            },
+                            {
+                                "text": "It indicates that human activities have no impact on wildlife",
+                                "isRight": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "id": 9,
+            "name": "Mekong Tiger",
             "photoName": "cat10",
             "info": "catinfo10",
             "infoDurationMinutes": 10,
@@ -1789,211 +2011,211 @@
                 "quizDurationMinutes": 5,
                 "questions": [
                     {
-                        "question": "What type of engines power the Beechcraft King Air?",
+                        "question": "What is the scientific name of the Mekong tiger?",
                         "variants": [
                             {
-                                "text": "Single piston engines",
+                                "text": "Panthera tigris altaica",
                                 "isRight": false
                             },
                             {
-                                "text": "Quad turbofan engines",
-                                "isRight": false
-                            },
-                            {
-                                "text": "Twin-turboprop engines",
+                                "text": "Panthera tigris mekongensis",
                                 "isRight": true
                             },
                             {
-                                "text": "Triple turboshaft engines",
+                                "text": "Panthera tigris corbetti",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Panthera tigris jacksoni",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "How many occupants can the cabin of the Beechcraft King Air accommodate?",
+                        "question": "In which regions are Mekong tigers primarily found?",
                         "variants": [
                             {
-                                "text": "Up to 5 occupants",
+                                "text": "India and Nepal",
                                 "isRight": false
                             },
                             {
-                                "text": "Up to 15 occupants",
+                                "text": "Russia and Mongolia",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Laos, Cambodia, Thailand, and Vietnam",
                                 "isRight": true
                             },
                             {
-                                "text": "Up to 10 occupants",
-                                "isRight": false
-                            },
-                            {
-                                "text": "Up to 20 occupants",
+                                "text": "Malaysia and Indonesia",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "What is the primary purpose of the Beechcraft King Air?",
+                        "question": "What is the primary threat to the survival of Mekong tigers?",
                         "variants": [
                             {
-                                "text": "Crop dusting",
+                                "text": "Overpopulation",
                                 "isRight": false
                             },
                             {
-                                "text": "Executive transport",
+                                "text": "Habitat destruction and poaching",
                                 "isRight": true
                             },
                             {
-                                "text": "Military combat",
+                                "text": "Natural predators",
                                 "isRight": false
                             },
                             {
-                                "text": "Airshow performances",
+                                "text": "Climate change",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "What type of cockpit layout does the Beechcraft King Air feature?",
+                        "question": "What is the typical weight range for male Mekong tigers?",
                         "variants": [
                             {
-                                "text": "Analog cockpit",
+                                "text": "50-75 kilograms",
                                 "isRight": false
                             },
                             {
-                                "text": "Glass cockpit",
+                                "text": "200-250 kilograms",
+                                "isRight": false
+                            },
+                            {
+                                "text": "130-180 kilograms",
                                 "isRight": true
                             },
                             {
-                                "text": "Manual cockpit",
-                                "isRight": false
-                            },
-                            {
-                                "text": "Digital cockpit",
+                                "text": "300-350 kilograms",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "How many engines provide power to the Beechcraft King Air?",
+                        "question": "What type of habitats do Mekong tigers prefer?",
                         "variants": [
                             {
-                                "text": "One engine",
+                                "text": "Deserts",
                                 "isRight": false
                             },
                             {
-                                "text": "Three engines",
+                                "text": "Grasslands",
                                 "isRight": false
                             },
                             {
-                                "text": "Two engines",
+                                "text": "Tropical rainforests and river basins",
                                 "isRight": true
                             },
                             {
-                                "text": "Four engines",
+                                "text": "Urban areas",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "What is one of the notable features of the Beechcraft King Air's cabin?",
+                        "question": "What is a primary component of the Mekong tiger's diet?",
                         "variants": [
                             {
-                                "text": "Limited space",
+                                "text": "Fruits and berries",
                                 "isRight": false
                             },
                             {
-                                "text": "Spacious and luxurious interior",
+                                "text": "Fish and amphibians",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Large ungulates such as deer and wild boar",
                                 "isRight": true
                             },
                             {
-                                "text": "Lack of amenities",
-                                "isRight": false
-                            },
-                            {
-                                "text": "Uncomfortable seating",
+                                "text": "Insects and small rodents",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "What is a key strength of the Beechcraft King Air in terms of its operating capabilities?",
+                        "question": "How does the IUCN classify the Mekong tiger?",
                         "variants": [
                             {
-                                "text": "Limited range",
+                                "text": "Vulnerable",
                                 "isRight": false
                             },
                             {
-                                "text": "Versatility in different missions and environments",
+                                "text": "Endangered",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Critically Endangered",
                                 "isRight": true
                             },
                             {
-                                "text": "Inability to operate from short airstrips",
-                                "isRight": false
-                            },
-                            {
-                                "text": "Lack of reliability",
+                                "text": "Least Concern",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "What type of construction does the Beechcraft King Air feature?",
+                        "question": "How many Mekong tigers are estimated to remain in the wild?",
                         "variants": [
                             {
-                                "text": "Fragile construction",
+                                "text": "Over 10,000",
                                 "isRight": false
                             },
                             {
-                                "text": "Limited durability",
+                                "text": "Less than 50",
                                 "isRight": false
                             },
                             {
-                                "text": "Rugged construction",
+                                "text": "Fewer than 200",
                                 "isRight": true
                             },
                             {
-                                "text": "Weak construction",
+                                "text": "More than 5,000",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "What is one of the notable applications of the Beechcraft King Air in addition to executive transport?",
+                        "question": "What ecological role do Mekong tigers play?",
                         "variants": [
                             {
-                                "text": "Law enforcement surveillance",
+                                "text": "Pollinators",
+                                "isRight": false
+                            },
+                            {
+                                "text": "Apex predators regulating prey populations",
                                 "isRight": true
                             },
                             {
-                                "text": "Underwater research",
+                                "text": "Seed dispersers",
                                 "isRight": false
                             },
                             {
-                                "text": "Space exploration",
-                                "isRight": false
-                            },
-                            {
-                                "text": "Desert racing",
+                                "text": "Decomposers",
                                 "isRight": false
                             }
                         ]
                     },
                     {
-                        "question": "What is one of the enduring characteristics of the Beechcraft King Air?",
+                        "question": "Why is protecting Mekong tigers important?",
                         "variants": [
                             {
-                                "text": "Forgotten in aviation history",
+                                "text": "They are important pollinators",
                                 "isRight": false
                             },
                             {
-                                "text": "Revered as a reliable and versatile aircraft",
+                                "text": "They are a primary food source for humans",
+                                "isRight": false
+                            },
+                            {
+                                "text": "They maintain ecological balance and biodiversity",
                                 "isRight": true
                             },
                             {
-                                "text": "Limited popularity",
-                                "isRight": false
-                            },
-                            {
-                                "text": "Minimal impact on aviation development",
+                                "text": "They are pests that need to be controlled",
                                 "isRight": false
                             }
                         ]

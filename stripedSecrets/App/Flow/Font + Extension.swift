@@ -9,11 +9,14 @@ extension UIFont {
     enum CustomFonts: String {
         case joti = "JotiOne"
         case inter = "Inter"
+        case sofia = "SofiaSans"
     }
     
     enum CustomFontStyle: String {
         case regular = "-Regular"
         case bold = "-Bold"
+        case black = "-Black"
+        case light = "-Light" 
     }
     
     static func customFont(
@@ -53,6 +56,32 @@ extension UILabel {
         label.attributedText = attributedString
         
         return label
+    }
+}
+
+extension UITextView {
+    static func createTextView(withText text: String, font: UIFont, textColor: UIColor, paragraphSpacing: CGFloat, lineHeightMultiple: CGFloat, textAlignment: NSTextAlignment = .center) -> UITextView {
+        let textView = UITextView()
+        textView.isEditable = false
+        textView.textAlignment = textAlignment
+        textView.textContainer.lineFragmentPadding = 0
+        textView.textContainerInset = .zero
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.paragraphSpacing = paragraphSpacing
+        paragraphStyle.lineHeightMultiple = lineHeightMultiple
+        paragraphStyle.alignment = textAlignment
+        
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: font,
+            .foregroundColor: textColor,
+            .paragraphStyle: paragraphStyle
+        ]
+        
+        let attributedString = NSAttributedString(string: text, attributes: attributes)
+        textView.attributedText = attributedString
+        
+        return textView
     }
 }
 
@@ -99,6 +128,27 @@ extension UIButton {
     private func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
+    }
+    
+    
+}
+
+extension NSAttributedString {
+    static func attributedString(from string: String, boldParts: [String], boldFont: UIFont, regularFont: UIFont, boldColor: UIColor, regularColor: UIColor) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: string, attributes: [
+            .font: regularFont,
+            .foregroundColor: regularColor
+        ])
+        
+        boldParts.forEach { boldPart in
+            let range = (string as NSString).range(of: boldPart)
+            attributedString.addAttributes([
+                .font: boldFont,
+                .foregroundColor: boldColor
+            ], range: range)
+        }
+        
+        return attributedString
     }
 }
 

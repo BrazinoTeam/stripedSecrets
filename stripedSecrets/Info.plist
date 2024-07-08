@@ -7,6 +7,9 @@
 		<string>JotiOne-Regular.ttf</string>
 		<string>Inter-Bold.ttf</string>
 		<string>Inter-Regular.ttf</string>
+		<string>SofiaSans-Light.ttf</string>
+		<string>SofiaSans-Black.ttf</string>
+		<string>SofiaSans-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -38,6 +38,27 @@ class HomeView: UIView {
         return label
     }()
     
+    private(set) lazy var leftBtn: UIButton = {
+        let button = UIButton()
+        button.setImage(.btnLeft, for: .normal)
+        button.setImage(.btnLeft, for: .highlighted)
+        return button
+    }()
+ 
+    private(set) lazy var rightBtn: UIButton = {
+        let button = UIButton()
+        button.setImage(.btnRight, for: .normal)
+        button.setImage(.btnRight, for: .highlighted)
+        return button
+    }()
+
+    private(set) lazy var collectionView: UICollectionView = {
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        collectionView.backgroundColor = .clear
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        return collectionView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -50,7 +71,7 @@ class HomeView: UIView {
     
     private func setupUI() {
 
-        [bgImage, contScoreView] .forEach(addSubview(_:))
+        [bgImage, contScoreView, collectionView, leftBtn, rightBtn] .forEach(addSubview(_:))
         contScoreView.addSubview(imgPoints)
         contScoreView.addSubview(scoreLabel)
 
@@ -78,6 +99,37 @@ class HomeView: UIView {
             make.centerY.equalTo(imgPoints)
             make.left.equalTo(imgPoints.snp.right).offset(20)
         }
+        
+        collectionView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview().inset(50)
+            make.top.equalTo(contScoreView.snp.bottom).offset(20)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-120)
+        }
+        
+        leftBtn.snp.makeConstraints { make in
+            make.centerY.equalTo(collectionView)
+            make.right.equalTo(collectionView.snp.left).offset(-16)
+        }
+        
+        rightBtn.snp.makeConstraints { make in
+            make.centerY.equalTo(collectionView)
+            make.left.equalTo(collectionView.snp.right).offset(16)
+        }
+    }
+    
+    func createLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+            let section = NSCollectionLayoutSection(group: group)
+            section.orthogonalScrollingBehavior = .groupPaging
+            return section
+        }
+        return layout
     }
 }
 

@@ -1,8 +1,6 @@
-//
-//  jsonData.swift
 
 {
-    "Tigers": [
+    "tigers": [
         {
             "id": 0,
             "name": "Indochinese Tiger",

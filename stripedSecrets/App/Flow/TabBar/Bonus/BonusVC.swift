@@ -17,6 +17,13 @@ class BonusVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureLabel()
+    }
+    
+    private func configureLabel() {
+        contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
+    }
 }
 

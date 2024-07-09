@@ -16,7 +16,12 @@ class HomeInfoView: UIView {
     
     private(set) lazy var btnBack: UIButton = {
         let button = UIButton()
-        button.setImage(.btnBack, for: .normal)
+        button.layer.shadowColor = UIColor.cLightYellow.cgColor
+        button.layer.shadowOpacity = 1
+        button.layer.shadowRadius = 8
+        button.layer.shadowOffset = CGSize(width: 0, height: 0)
+        button.setBackgroundImage(.btnBack, for: .normal)
+        button.setBackgroundImage(.btnBackTapped, for: .highlighted)
         return button
     }()
     

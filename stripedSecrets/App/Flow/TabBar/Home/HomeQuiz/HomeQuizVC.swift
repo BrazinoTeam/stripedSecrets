@@ -3,20 +3,21 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class HomeQuizVC: UIViewController {
     
-    
+    private var fullScreenView: UIView?
     private var contentView: HomeQuizView {
         view as? HomeQuizView ?? HomeQuizView()
     }
     
-//    private var tigers: [AirplaneModel.Airplane] = []
+    private var tigers: [TigerModel.Tiger] = []
     private var currentQuestionIndex = 0
-//    private var variants: [AirplaneModel.Airplane.Quiz.Question.Variant] = []
+    private var variants: [TigerModel.Tiger.Quiz.Question.Variant] = []
     private var selectedIndexPath: IndexPath? {
         didSet {
-//            updateAnswerButtonState()
+            updateAnswerButtonState()
         }
     }
     private var isRightCountAnswers = 0
@@ -40,20 +41,19 @@ class HomeQuizVC: UIViewController {
         super.viewDidLoad()
         tappedButtons()
         configureTitleLabel()
+        configureCollection()
+        loadTigers()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
+        configureLabel()
     }
-    
-    private func tappedButtons() {
-        contentView.btnBack.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-
-    }
-    
-    @objc private func goBack() {
-        navigationController?.popViewController(animated: true)
+  
+    private func configureLabel() {
+        contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
     }
     
     private func configureTitleLabel() {
@@ -79,6 +79,312 @@ class HomeQuizVC: UIViewController {
         case 9:
             contentView.titleLabel.text = "South China\nTiger"
         default: break
+        }
+    }
+    
+    private func configureCollection() {
+        contentView.collectionView.delegate = self
+        contentView.collectionView.dataSource = self
+        contentView.collectionView.register(QuizOptionCell.self, forCellWithReuseIdentifier: "QuizOptionCell")
+    }
+    
+    private func tappedButtons() {
+        contentView.btnBack.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+        contentView.btnAnswer.addTarget(self, action: #selector(answerBtnTapped), for: .touchUpInside)
+
+    }
+    
+    @objc private func goBack() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func answerBtnTapped() {
+        guard let selectedIndexPath = selectedIndexPath else { return }
+        
+        let isCorrect = variants[selectedIndexPath.item].isRight
+        if isCorrect {
+            isRightCountAnswers += 1
+        }
+        
+        // Перекрасить выбранную ячейку в зависимости от правильности ответа
+        if let selectedCell = contentView.collectionView.cellForItem(at: selectedIndexPath) as? QuizOptionCell {
+            selectedCell.setCorrect(isCorrect)
+        }
+        
+        // Найти ячейку с правильным ответом и изменить её цвет фона на зелёный
+        for (index, variant) in variants.enumerated() {
+            if variant.isRight {
+                if let cell = contentView.collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? QuizOptionCell {
+                    cell.setCorrect(true)
+                }
+            }
+        }
+        
+        // Обновление цвета круга
+        contentView.updateCircleColor(at: countAnswers, isCorrect: isCorrect, isCurrent: false)
+        
+        // Переход к следующему вопросу через 2 секунды
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.contentView.btnAnswer.isEnabled = true
+            self.countAnswers += 1
+            
+            if self.countAnswers >= 10 {
+                if self.isRightCountAnswers >= 6 {
+                    self.navigateToQuizWinVC()
+                } else {
+                    self.navigateToQuizLoseVC()
+                }
+            } else {
+                self.currentQuestionIndex += 1
+                self.selectedIndexPath = nil
+                self.displayQuestion(at: self.currentQuestionIndex)
+            }
+            
+            // Установите текущий индекс как активный
+            self.contentView.updateCircleColor(at: self.countAnswers, isCorrect: false, isCurrent: true)
+        }
+        contentView.btnAnswer.isEnabled = false
+    }
+    
+    private func loadTigers() {
+        tigers = TigerModel.getTigerFromFile()
+        
+        if let url = Bundle.main.url(forResource: "jsonData", withExtension: "json"),
+           let data = try? Data(contentsOf: url),
+           let jsonString = String(data: data, encoding: .utf8) {
+        } else {
+            print("Failed to load or parse JSON data.")
+        }
+        
+        if tigers.isEmpty {
+            print("No tigers found in the JSON data.")
+        } else {
+            print("Tigers loaded: \(tigers.count)")
+            displayQuestion(at: currentQuestionIndex)
+        }
+        
+        contentView.collectionView.reloadData()
+    }
+    
+    private func displayQuestion(at index: Int) {
+        guard !tigers.isEmpty else {
+            return
+        }
+        
+        let questions = tigers[selectedTigerIndex].quiz.questions
+        
+        guard index < questions.count else {
+            return
+        }
+        
+        let question = questions[index]
+        
+        let paragraphStyleLabel = NSMutableParagraphStyle()
+            paragraphStyleLabel.paragraphSpacing = 0
+            paragraphStyleLabel.lineHeightMultiple = 0.83
+            
+            let attributesLabel: [NSAttributedString.Key: Any] = [
+                .font: UIFont.customFont(font: .sofia, style: .black, size: 16),
+                .foregroundColor: UIColor.white,
+                .paragraphStyle: paragraphStyleLabel,
+            ]
+            
+            let attributedStringLabel = NSAttributedString(string: "\(question.question)", attributes: attributesLabel)
+            contentView.subTitleLabel.attributedText = attributedStringLabel
+            contentView.subTitleLabel.textAlignment = .center
+            contentView.subTitleLabel.adjustsFontSizeToFitWidth = true
+        
+        variants = question.variants
+        contentView.collectionView.reloadData()
+        updateAnswerButtonState()
+        
+        contentView.updateCircleColor(at: countAnswers, isCorrect: false, isCurrent: true)
+    }
+    
+    private func updateAnswerButtonState() {
+        if selectedIndexPath != nil {
+            contentView.btnAnswer.alpha = 1.0
+            contentView.btnAnswer.configureButton(withTitle: "Answer", font: .customFont(font: .joti, style: .regular, size: 24), titleColor: .cDarkRed, normalImage: .btnActivity, highlightedImage: .btnActivityTapped)
+        } else {
+            contentView.btnAnswer.alpha = 1.0
+            contentView.btnAnswer.configureButton(withTitle: "Answer", font: .customFont(font: .joti, style: .regular, size: 24), titleColor: .cDarkRed, normalImage: .btnActivityLocked, highlightedImage: .btnActivityLocked)
+        }
+    }
+    
+    private func navigateToQuizWinVC() {
+        presentModalView(title: "YOU WIN", subtitle: "Congrats! You nailed most of the\nquestions and scored a solid 150\npoints. Well done!", state: false)
+        UserDef.shared.scorePoints += 150
+    }
+    
+    private func navigateToQuizLoseVC() {
+        presentModalView(title: "YOU LOSE", subtitle: "Unfortunately, you missed a\nfew questions this time.\nDon’t worry! Take some time\nto learn more about tigers,\nand you’ll be ready to ace the\nquiz next time.", state: true)
+    }
+}
+
+extension HomeQuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return variants.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "QuizOptionCell", for: indexPath) as! QuizOptionCell
+        let variant = variants[indexPath.item]
+        cell.configure(with: variant, at: indexPath.item)
+        cell.setSelected(indexPath == selectedIndexPath)
+        
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let previousIndexPath = selectedIndexPath {
+            let previousCell = collectionView.cellForItem(at: previousIndexPath) as? QuizOptionCell
+            previousCell?.setSelected(false)
+        }
+        
+        selectedIndexPath = indexPath
+        let currentCell = collectionView.cellForItem(at: indexPath) as? QuizOptionCell
+        currentCell?.setSelected(true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? QuizOptionCell {
+            cell.setSelected(false)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 160, height: 130)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+    }
+}
+
+extension HomeQuizVC {
+    
+    func presentModalView(title: String, subtitle: String, state: Bool) {
+        if fullScreenView == nil {
+            fullScreenView = UIView(frame: self.view.bounds)
+            fullScreenView!.backgroundColor = .black.withAlphaComponent(0.8)
+            fullScreenView!.alpha = 0
+            
+            let viewContainer = UIView()
+            viewContainer.backgroundColor = .clear
+            viewContainer.layer.borderWidth = 1
+            viewContainer.layer.borderColor = UIColor.cLightYellow.cgColor
+            viewContainer.layer.cornerRadius = 16
+            fullScreenView!.addSubview(viewContainer)
+            
+            let bgImage = UIImageView(image: .contModel)
+            bgImage.contentMode = .scaleToFill
+            bgImage.clipsToBounds = true
+            viewContainer.addSubview(bgImage)
+            
+            let titleLabel = UILabel.createLabel(withText: title, font: .customFont(font: .joti, style: .regular, size: 56), textColor: .cLightYellow, paragraphSpacing: 0, lineHeightMultiple: 1)
+            titleLabel.numberOfLines = 0
+            titleLabel.textAlignment = .center
+            viewContainer.addSubview(titleLabel)
+            
+            let imageBonusView = UIImageView(image: .imgTigerModal)
+            imageBonusView.contentMode = .scaleAspectFit
+            viewContainer.addSubview(imageBonusView)
+            
+            let congraLabel = UILabel.createLabel(withText: "Congratulations!", font: .customFont(font: .joti, style: .regular, size: 24), textColor: .cLightYellow, paragraphSpacing: 0, lineHeightMultiple: 1.17)
+            congraLabel.numberOfLines = 0
+            congraLabel.textAlignment = .center
+            congraLabel.isHidden = state
+            viewContainer.addSubview(congraLabel)
+            
+            let subtitleLabelView = UILabel.createLabel(withText: subtitle, font: .customFont(font: .sofia, style: .regular, size: 16), textColor: .white, paragraphSpacing: 0, lineHeightMultiple: 1.17)
+            subtitleLabelView.numberOfLines = 0
+            subtitleLabelView.textAlignment = .center
+            viewContainer.addSubview(subtitleLabelView)
+
+            let imgCointWin = UIImageView(image: .imgCointWin)
+            imgCointWin.contentMode = .scaleAspectFit
+            imgCointWin.isHidden = state
+            viewContainer.addSubview(imgCointWin)
+            
+            let backButton = UIButton()
+            backButton.configureButton(withTitle: "Ok", font: .customFont(font: .joti, style: .regular, size: 20), titleColor: .cDarkRed, normalImage: .btnActivity, highlightedImage: .btnActivityTapped)
+            backButton.addTarget(self, action: #selector(tappedCloseBuy), for: .touchUpInside)
+            fullScreenView!.addSubview(backButton)
+
+            viewContainer.snp.makeConstraints { make in
+                make.centerX.equalToSuperview()
+                make.centerY.equalToSuperview()
+                make.height.equalTo(703)
+                make.width.equalTo(313)
+            }
+
+            bgImage.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+
+            titleLabel.snp.makeConstraints { make in
+                make.centerX.equalTo(imageBonusView)
+                make.top.equalToSuperview().offset(20)
+            }
+
+            imageBonusView.snp.makeConstraints { make in
+                make.top.equalTo(titleLabel.snp.bottom).offset(8)
+                make.centerX.equalToSuperview()
+                make.width.equalTo(235)
+                make.height.equalTo(320)
+            }
+
+            congraLabel.snp.makeConstraints { make in
+                make.centerX.equalTo(imageBonusView)
+                make.top.equalTo(imageBonusView.snp.bottom).offset(16)
+            }
+
+            if state {
+                subtitleLabelView.snp.makeConstraints { make in
+                    make.centerX.equalTo(imageBonusView)
+                    make.top.equalTo(imageBonusView.snp.bottom).offset(16)
+                }
+
+                backButton.snp.makeConstraints { make in
+                    make.centerX.equalTo(imageBonusView)
+                    make.top.equalTo(subtitleLabelView.snp.bottom).offset(32)
+                    make.height.equalTo(44)
+                    make.width.equalTo(150)
+                }
+            } else {
+                subtitleLabelView.snp.makeConstraints { make in
+                    make.centerX.equalTo(imageBonusView)
+                    make.top.equalTo(congraLabel.snp.bottom).offset(8)
+                }
+
+                imgCointWin.snp.makeConstraints { make in
+                    make.centerX.equalTo(imageBonusView)
+                    make.top.equalTo(subtitleLabelView.snp.bottom).offset(16)
+                }
+
+                backButton.snp.makeConstraints { make in
+                    make.centerX.equalTo(imageBonusView)
+                    make.top.equalTo(imgCointWin.snp.bottom).offset(16)
+                    make.height.equalTo(44)
+                    make.width.equalTo(150)
+                }
+            }
+            
+            self.view.addSubview(fullScreenView!)
+        }
+        UIView.animate(withDuration: 0.5, animations: {
+            self.fullScreenView!.alpha = 1
+        })
+    }
+
+    @objc func tappedCloseBuy() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.fullScreenView?.alpha = 0
+        }) { _ in
+            self.fullScreenView?.removeFromSuperview()
+            self.fullScreenView = nil
+            self.navigationController?.popToRootViewController(animated: false)
         }
     }
 }

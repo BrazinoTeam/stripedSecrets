@@ -18,5 +18,14 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureLabel()
+    }
+    
+    private func configureLabel() {
+        contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
+    }
+    
 }
 

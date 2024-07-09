@@ -20,6 +20,8 @@ class HomeCell: UICollectionViewCell {
         let view = UIView()
         view.backgroundColor = .cDarkRed
         view.layer.cornerRadius = 12
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.cLightYellow.cgColor
         return view
     }()
     

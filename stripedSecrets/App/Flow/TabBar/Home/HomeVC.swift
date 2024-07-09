@@ -23,6 +23,11 @@ class HomeVC: UIViewController, HomeCellDelegate {
         tappedButtons()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureLabel()
+    }
+    
     private func configureCollection() {
         contentView.collectionView.delegate = self
         contentView.collectionView.dataSource = self
@@ -32,6 +37,11 @@ class HomeVC: UIViewController, HomeCellDelegate {
     private func tappedButtons() {
         contentView.rightBtn.addTarget(self, action: #selector(rightBtnTapped), for: .touchUpInside)
         contentView.leftBtn.addTarget(self, action: #selector(leftBtnTapped), for: .touchUpInside)
+    }
+    
+    
+    private func configureLabel() {
+        contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
     }
     
     @objc private func leftBtnTapped() {

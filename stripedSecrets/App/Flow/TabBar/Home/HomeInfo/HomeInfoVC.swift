@@ -22,13 +22,17 @@ class HomeInfoVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("countInfo == \(countInfo)")
         tappedButtons()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
+        configureLabel()
+    }
+    
+    private func configureLabel() {
+        contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
     }
     
     private func tappedButtons() {

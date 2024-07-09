@@ -1,8 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "Chapter (2).pdf",
-      "idiom" : "universal"
+      "filename" : "Vector (21).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Vector (22).png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Vector (23).png",
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

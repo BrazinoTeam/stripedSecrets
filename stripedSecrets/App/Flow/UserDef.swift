@@ -26,6 +26,15 @@ class UserDef {
         }
     }
     
+    var firstLaunchDate: Date? {
+        get {
+            return defaults.object(forKey: "firstLaunchDate") as? Date
+        }
+        set {
+            defaults.set(newValue, forKey: "firstLaunchDate")
+        }
+    }
+    
     var userName: String? {
         get {
             return defaults.string(forKey: "userName")
@@ -35,9 +44,9 @@ class UserDef {
         }
     }
     
-    var userID: Int {
+    var userID: Int? {
         get {
-            return defaults.integer(forKey: "userID", defaultValue: 1)
+            return defaults.object(forKey: "userID") as? Int
         }
         set {
             defaults.set(newValue, forKey: "userID")

@@ -14,7 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        
         let vc = LoadingVC()
+        if UserDef.shared.firstLaunchDate == nil {
+            UserDef.shared.firstLaunchDate = Date()
+             }
         let navigationController = UINavigationController(rootViewController: vc)
         navigationController.setNavigationBarHidden(true, animated: false)
         window = UIWindow(windowScene: windowScene)

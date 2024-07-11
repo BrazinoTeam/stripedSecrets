@@ -106,7 +106,7 @@ extension UIButton {
     }
 }
 
-extension UIButton {
+extension UIImageView {
     func saveImageToLocal(image: UIImage, userID: String) {
         if let data = image.jpegData(compressionQuality: 1.0) {
             let fileURL = getDocumentsDirectory().appendingPathComponent("\(userID).png")

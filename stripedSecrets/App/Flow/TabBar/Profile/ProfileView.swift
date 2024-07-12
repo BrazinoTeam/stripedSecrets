@@ -209,7 +209,7 @@ class ProfileView: UIView, UIScrollViewDelegate{
            scrollView.snp.makeConstraints { make in
                make.top.equalTo(contScoreView.snp.bottom).offset(20)
                make.left.right.equalToSuperview()
-               make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-36)
+               make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-80)
            }
            
            contentView.snp.makeConstraints { make in

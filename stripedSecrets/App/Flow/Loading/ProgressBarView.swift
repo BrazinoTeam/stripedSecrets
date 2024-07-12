@@ -17,7 +17,7 @@ struct ProgressBarView: View {
     
     var body: some View {
         ZStack(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 20.0)
+            RoundedRectangle(cornerRadius: 0.0)
                 .stroke(LinearGradient(
                     colors: [
                         Color(hex:"#FF3F3F"),
@@ -26,11 +26,11 @@ struct ProgressBarView: View {
                     endPoint: .trailing
                 ), lineWidth: 2)
                 .background {
-                    RoundedRectangle(cornerRadius: 20.0)
+                    RoundedRectangle(cornerRadius: 0.0)
                         .fill(.cLightRed)
                 }
             
-            RoundedRectangle(cornerRadius: 20.0)
+            RoundedRectangle(cornerRadius: 2.0)
                 .foregroundStyle(
                     LinearGradient(
                         colors: [
@@ -42,16 +42,17 @@ struct ProgressBarView: View {
                 )
                 .frame(maxWidth: innerProgressBarLength)
                 .frame(height: 16)
-                .padding(4)
+                .border(.cLightRed, width: 0.5)
+                .shadow(color: .red, radius: 10, x: 0, y: 0)
             
         }
         .fixedSize(horizontal: false, vertical: true)
         .frame(width: 260)
-        .clipShape( RoundedRectangle(cornerRadius: 20))
+        .clipShape( RoundedRectangle(cornerRadius: 2))
         .readSize { self.barLength = $0.width }
     }
 }
 
 #Preview {
-    ProgressBarView(currentProgress: 50, maxProgress: 280)
+    ProgressBarView(currentProgress: 50, maxProgress: 260)
 }

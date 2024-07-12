@@ -38,6 +38,22 @@ class RatingView: UIView {
         return label
     }()
     
+    private (set) var titleLabel: UILabel = {
+        let label = UILabel.createLabel(withText: "Rating of the week", font: .customFont(font: .joti, style: .regular, size: 28), textColor: .cLightYellow, paragraphSpacing: 1, lineHeightMultiple: 0.96)
+        return label
+    }()
+    
+    private(set) lazy var ratingTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.backgroundColor = .clear
+        tableView.showsVerticalScrollIndicator = false
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 4, right: 0)
+        tableView.register(RatingCell.self, forCellReuseIdentifier: RatingCell.reuseId)
+        tableView.register(CustomRatingCell.self, forCellReuseIdentifier: CustomRatingCell.reuseId)
+        tableView.separatorStyle = .none
+        return tableView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -50,7 +66,7 @@ class RatingView: UIView {
     
     private func setupUI() {
 
-        [bgImage, contScoreView] .forEach(addSubview(_:))
+        [bgImage, contScoreView, titleLabel, ratingTableView] .forEach(addSubview(_:))
         contScoreView.addSubview(imgPoints)
         contScoreView.addSubview(scoreLabel)
 
@@ -77,6 +93,17 @@ class RatingView: UIView {
         scoreLabel.snp.makeConstraints { make in
             make.centerY.equalTo(imgPoints)
             make.left.equalTo(imgPoints.snp.right).offset(20)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(contScoreView.snp.bottom).offset(20)
+        }
+        
+        ratingTableView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(titleLabel.snp.bottom).offset(24)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-56)
         }
     }
 }

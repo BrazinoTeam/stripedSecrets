@@ -22,6 +22,7 @@ class HomeCell: UICollectionViewCell {
         view.layer.cornerRadius = 12
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.cLightYellow.cgColor
+        view.clipsToBounds = true
         return view
     }()
     
@@ -34,19 +35,21 @@ class HomeCell: UICollectionViewCell {
     
     private(set) lazy var achiImg: UIImageView = {
         let iv = UIImageView()
+        iv.layer.cornerRadius = 12
+        iv.clipsToBounds = true
         return iv
     }()
     
     private(set) lazy var infoBtn: UIButton = {
         let btn = UIButton()
-        btn.setBackgroundImage(.btnInfoHome, for: .normal)
+        btn.configureButton(withTitle: "Info", font: .customFont(font: .joti, style: .regular, size: 22), titleColor: .cDarkRed, normalImage: .btnActivity, highlightedImage: .btnActivityTapped)
         btn.addTarget(self, action: #selector(infoBtnTapped), for: .touchUpInside)
         return btn
     }()
     
     private(set) lazy var quizBtn: UIButton = {
         let btn = UIButton()
-        btn.setBackgroundImage(.btnQuizHome, for: .normal)
+        btn.configureButton(withTitle: "Quiz", font: .customFont(font: .joti, style: .regular, size: 22), titleColor: .cDarkRed, normalImage: .btnActivity, highlightedImage: .btnActivityTapped)
         btn.addTarget(self, action: #selector(quizBtnTapped), for: .touchUpInside)
         return btn
     }()
@@ -90,23 +93,29 @@ class HomeCell: UICollectionViewCell {
         }
 
         titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(20.autoSize)
             make.left.right.equalToSuperview().inset(10)
         }
         
         achiImg.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(32)
+            make.top.equalTo(titleLabel.snp.bottom).offset(32.autoSize)
             make.centerX.equalToSuperview()
+            make.width.equalTo(232.autoSize)
+            make.height.equalTo(260.autoSize)
         }
 
         infoBtn.snp.makeConstraints { make in
-            make.top.equalTo(achiImg.snp.bottom).offset(32)
+            make.top.equalTo(achiImg.snp.bottom).offset(32.autoSize)
             make.left.right.equalToSuperview().inset(12)
+            make.height.equalTo(52.autoSize)
+            make.width.equalTo(260.autoSize)
         }
         
         quizBtn.snp.makeConstraints { make in
-            make.top.equalTo(infoBtn.snp.bottom).offset(20)
+            make.top.equalTo(infoBtn.snp.bottom).offset(20.autoSize)
             make.left.right.equalToSuperview().inset(12)
+            make.height.equalTo(52.autoSize)
+            make.width.equalTo(260.autoSize)
         }
     }
 }

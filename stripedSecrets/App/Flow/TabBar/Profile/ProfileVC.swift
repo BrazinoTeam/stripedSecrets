@@ -8,6 +8,7 @@ import SnapKit
 class ProfileVC: UIViewController, UITextFieldDelegate {
     
     private let imagePicker = UIImagePickerController()
+    private let memory = UserDef.shared
     private var fullScreenView: UIView?
 
     private var contentView: ProfileView {
@@ -27,6 +28,8 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         configureLabel()
         checkFotoLoad()
+        achivementsCheck()
+        updateAchivViews()
     }
     
     private func buttonsActive() {
@@ -38,6 +41,32 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
     private func configureLabel() {
         contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
         contentView.titleProfileLabel.text = "\(UserDef.shared.userName ?? "User Name")"
+    }
+    
+    
+    private func updateAchivViews() {
+        contentView.achiOneView.alpha = memory.tigerEnthusiast ? 1 : 0.4
+        contentView.achiTwoView.alpha = memory.tigerExpert ? 1 : 0.4
+        contentView.achiThreeView.alpha = memory.tigerMaster ? 1 : 0.4
+        contentView.achiFourView.alpha = memory.stealthyHunter ? 1 : 0.4
+        contentView.achiFiveView.alpha = memory.tigerTracker ? 1 : 0.4
+        contentView.achiSixView.alpha = memory.knowledgeHoarder ? 1 : 0.4
+        contentView.achiSevenView.alpha = memory.tigerGuardian ? 1 : 0.4
+    }
+    
+    private func achivementsCheck() {
+        if memory.answerQuestions >= 10 {
+            memory.tigerEnthusiast = true
+        }
+        if memory.answerQuestions >= 50 {
+            memory.tigerExpert = true
+        }
+        if memory.answerQuestions >= 100 {
+            memory.tigerMaster = true
+        }
+        if memory.scorePoints >= 1000 {
+            memory.knowledgeHoarder = true
+        }
     }
     
     private func pickerDelegate() {
@@ -199,7 +228,7 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         print("Клавиатура спрятана")
-//        GetService.shared.updateUser(userId: UD.shared.userID ?? 0, name: UD.shared.userName ?? "User# \(UD.shared.userID ?? 0)")
+        RatingService.shared.updateUser(userId: UserDef.shared.userID ?? 0, name: UserDef.shared.userName ?? "User# \(UserDef.shared.userID ?? 0)")
         return true
     }
 }

@@ -101,8 +101,8 @@ class HomeView: UIView {
         }
         
         collectionView.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(50)
-            make.top.equalTo(contScoreView.snp.bottom).offset(20)
+            make.left.right.equalToSuperview().inset(50.autoSize)
+            make.top.equalTo(contScoreView.snp.bottom).offset(20.autoSize)
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-120)
         }
         

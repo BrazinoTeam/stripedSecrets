@@ -183,7 +183,7 @@ class BonusView: UIView {
         contScoreView.snp.makeConstraints { make in
             make.height.equalTo(50)
             make.width.equalTo(140)
-            make.top.equalToSuperview().offset(60)
+            make.top.equalToSuperview().offset(60.autoSize)
             make.right.equalToSuperview().offset(-20)
         }
         
@@ -199,11 +199,11 @@ class BonusView: UIView {
         
         titleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(contScoreView.snp.bottom).offset(40)
+            make.top.equalTo(contScoreView.snp.bottom).offset(40.autoSize)
         }
         
-        let buttonWidth = 112
-        let buttonHeight = 112
+        let buttonWidth = 112.autoSize
+        let buttonHeight = 112.autoSize
         let spacing = 8
         let heightSpacing = 16
         
@@ -213,15 +213,15 @@ class BonusView: UIView {
             button.snp.makeConstraints { make in
                 make.width.equalTo(buttonWidth)
                 make.height.equalTo(buttonHeight)
-                make.top.equalTo(titleLabel.snp.bottom).offset(36 + (row * (buttonHeight + heightSpacing)))
-                make.centerX.equalToSuperview().offset((buttonWidth + spacing) * (column - 1))
+                make.top.equalTo(titleLabel.snp.bottom).offset(36 + (row * (Int(buttonHeight) + heightSpacing)))
+                make.centerX.equalToSuperview().offset((Int(buttonWidth) + spacing) * (column - 1))
             }
         }
         
         btnBonus.snp.makeConstraints { make in
-            make.top.equalTo(buttons.last!.snp.bottom).offset(36)
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
+            make.top.equalTo(buttons.last!.snp.bottom).offset(36.autoSize)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(360.autoSize)
             make.height.equalTo(44)
         }
         
@@ -246,29 +246,31 @@ class BonusView: UIView {
         }
         
         otherScoreLabel.snp.makeConstraints { make in
-            make.centerY.equalTo(imgPoints)
-            make.left.equalTo(imgPoints.snp.right).offset(20)
+            make.centerY.equalTo(otherImgPoints)
+            make.left.equalTo(otherImgPoints.snp.right).offset(20)
         }
         
         otherTitleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(contScoreView.snp.bottom).offset(40)
+            make.top.equalTo(contScoreView.snp.bottom).offset(40.autoSize)
         }
         
         otherSubTitleLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(otherTitleLabel.snp.bottom).offset(4)
+            make.top.equalTo(otherTitleLabel.snp.bottom).offset(4.autoSize)
         }
         
         otherCountLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(otherSubTitleLabel.snp.bottom).offset(36)
+            make.top.equalTo(otherSubTitleLabel.snp.bottom).offset(36.autoSize)
             make.height.equalTo(50)
         }
         
         otherImgTiger.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(otherCountLabel.snp.bottom).offset(36)
+            make.top.equalTo(otherCountLabel.snp.bottom).offset(36.autoSize)
+            make.width.equalTo(260.autoSize)
+            make.height.equalTo(350.autoSize)
         }
     }
 }

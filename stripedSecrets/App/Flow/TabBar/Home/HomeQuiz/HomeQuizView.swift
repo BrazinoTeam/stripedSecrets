@@ -138,14 +138,14 @@ class HomeQuizView: UIView {
         }
         
         btnBack.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(60)
+            make.top.equalToSuperview().offset(60.autoSize)
             make.left.equalToSuperview().offset(20)
         }
         
         contScoreView.snp.makeConstraints { make in
             make.height.equalTo(50)
             make.width.equalTo(140)
-            make.top.equalToSuperview().offset(60)
+            make.top.equalToSuperview().offset(60.autoSize)
             make.right.equalToSuperview().offset(-20)
         }
         
@@ -160,35 +160,47 @@ class HomeQuizView: UIView {
         }
         
         quizImage.snp.makeConstraints { make in
-            make.top.equalTo(btnBack.snp.bottom).offset(20)
+            make.top.equalTo(btnBack.snp.bottom).offset(20.autoSize)
             make.left.right.equalToSuperview().inset(20)
+            make.height.equalTo(172.autoSize)
         }
         
         circleContainerView.snp.makeConstraints { make in
-            make.top.equalTo(quizImage.snp.bottom).offset(16)
+            make.top.equalTo(quizImage.snp.bottom).offset(16.autoSize)
             make.centerX.equalToSuperview()
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(circleContainerView.snp.bottom).offset(16)
+            make.top.equalTo(circleContainerView.snp.bottom).offset(16.autoSize)
             make.centerX.equalToSuperview()
         }
         
         subTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(24)
+            make.top.equalTo(titleLabel.snp.bottom).offset(24.autoSize)
             make.left.right.equalToSuperview().inset(20)
         }
         
-        collectionView.snp.makeConstraints { make in
-                make.top.equalTo(subTitleLabel.snp.bottom).offset(16)
-                make.height.equalTo(300)
-                make.width.equalTo(360)
+        if UIScreen.main.bounds.height < 812 {
+               collectionView.snp.makeConstraints { make in
+                   make.top.equalTo(subTitleLabel.snp.bottom).offset(16.autoSize)
+                   make.height.equalTo(212)
+                   make.width.equalTo(360.autoSize)
+                   make.centerX.equalToSuperview()
+               }
+        } else {
+            collectionView.snp.makeConstraints { make in
+                make.top.equalTo(subTitleLabel.snp.bottom).offset(16.autoSize)
+                make.height.equalTo(296)
+                make.width.equalTo(360.autoSize)
                 make.centerX.equalToSuperview()
+            }
         }
         
         btnAnswer.snp.makeConstraints { make in
-            make.top.equalTo(collectionView.snp.bottom).offset(16)
-            make.left.right.equalToSuperview().inset(30)
+            make.top.equalTo(collectionView.snp.bottom).offset(16.autoSize)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(52.autoSize)
+            make.width.equalTo(332.autoSize)
         }
     }
     

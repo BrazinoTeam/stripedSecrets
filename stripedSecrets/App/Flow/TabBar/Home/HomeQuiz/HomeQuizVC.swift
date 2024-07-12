@@ -39,6 +39,7 @@ class HomeQuizVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tappedButtons()
         configureTitleLabel()
         configureCollection()
@@ -129,8 +130,10 @@ class HomeQuizVC: UIViewController {
             self.countAnswers += 1
             
             if self.countAnswers >= 10 {
+                UserDef.shared.stealthyHunter = true
                 if self.isRightCountAnswers >= 6 {
                     self.navigateToQuizWinVC()
+                    self.updateTigerTracker()
                 } else {
                     self.navigateToQuizLoseVC()
                 }
@@ -144,6 +147,33 @@ class HomeQuizVC: UIViewController {
             self.contentView.updateCircleColor(at: self.countAnswers, isCorrect: false, isCurrent: true)
         }
         contentView.btnAnswer.isEnabled = false
+    }
+    
+    
+    private func updateTigerTracker() {
+        switch selectedTigerIndex {
+        case 0:
+            UserDef.shared.addUniqueValue(1)
+        case 1:
+            UserDef.shared.addUniqueValue(2)
+        case 2:
+            UserDef.shared.addUniqueValue(3)
+        case 3:
+            UserDef.shared.addUniqueValue(4)
+        case 4:
+            UserDef.shared.addUniqueValue(5)
+        case 5:
+            UserDef.shared.addUniqueValue(6)
+        case 6:
+            UserDef.shared.addUniqueValue(7)
+        case 7:
+            UserDef.shared.addUniqueValue(8)
+        case 8:
+            UserDef.shared.addUniqueValue(9)
+        case 9:
+            UserDef.shared.addUniqueValue(10)
+        default: break
+        }
     }
     
     private func loadTigers() {
@@ -254,12 +284,20 @@ extension HomeQuizVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 160, height: 130)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
-    }
+          if UIScreen.main.bounds.height < 812 {
+              return CGSize(width: 120, height: 88)
+          } else {
+              return CGSize(width: 160.autoSize, height: 130.autoSize)
+          }
+      }
+      
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+          if UIScreen.main.bounds.height < 812 {
+              return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+          } else {
+              return UIEdgeInsets(top: 15.autoSize, left: 15.autoSize, bottom: 15.autoSize, right: 15.autoSize)
+          }
+      }
 }
 
 extension HomeQuizVC {
@@ -315,8 +353,8 @@ extension HomeQuizVC {
             viewContainer.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
                 make.centerY.equalToSuperview()
-                make.height.equalTo(703)
-                make.width.equalTo(313)
+                make.height.equalTo(703.autoSize)
+                make.width.equalTo(313.autoSize)
             }
 
             bgImage.snp.makeConstraints { make in
@@ -325,32 +363,41 @@ extension HomeQuizVC {
 
             titleLabel.snp.makeConstraints { make in
                 make.centerX.equalTo(imageBonusView)
-                make.top.equalToSuperview().offset(20)
+                make.top.equalToSuperview().offset(20.autoSize)
             }
 
-            imageBonusView.snp.makeConstraints { make in
-                make.top.equalTo(titleLabel.snp.bottom).offset(8)
-                make.centerX.equalToSuperview()
-                make.width.equalTo(235)
-                make.height.equalTo(320)
+            if UIScreen.main.bounds.height <= 812 {
+                imageBonusView.snp.makeConstraints { make in
+                    make.top.equalTo(titleLabel.snp.bottom).offset(8.autoSize)
+                    make.centerX.equalToSuperview()
+                    make.width.equalTo(200.autoSize)
+                    make.height.equalTo(236.autoSize)
+                }
+            } else {
+                imageBonusView.snp.makeConstraints { make in
+                    make.top.equalTo(titleLabel.snp.bottom).offset(8.autoSize)
+                    make.centerX.equalToSuperview()
+                    make.width.equalTo(235.autoSize)
+                    make.height.equalTo(320.autoSize)
+                }
             }
-
+            
             congraLabel.snp.makeConstraints { make in
                 make.centerX.equalTo(imageBonusView)
-                make.top.equalTo(imageBonusView.snp.bottom).offset(16)
+                make.top.equalTo(imageBonusView.snp.bottom).offset(16.autoSize)
             }
 
             if state {
                 subtitleLabelView.snp.makeConstraints { make in
                     make.centerX.equalTo(imageBonusView)
-                    make.top.equalTo(imageBonusView.snp.bottom).offset(16)
+                    make.top.equalTo(imageBonusView.snp.bottom).offset(16.autoSize)
                 }
 
                 backButton.snp.makeConstraints { make in
                     make.centerX.equalTo(imageBonusView)
-                    make.top.equalTo(subtitleLabelView.snp.bottom).offset(32)
-                    make.height.equalTo(44)
-                    make.width.equalTo(150)
+                    make.top.equalTo(subtitleLabelView.snp.bottom).offset(32.autoSize)
+                    make.height.equalTo(44.autoSize)
+                    make.width.equalTo(150.autoSize)
                 }
             } else {
                 subtitleLabelView.snp.makeConstraints { make in

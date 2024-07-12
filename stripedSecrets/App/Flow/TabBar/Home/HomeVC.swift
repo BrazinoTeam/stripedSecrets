@@ -39,7 +39,6 @@ class HomeVC: UIViewController, HomeCellDelegate {
         contentView.leftBtn.addTarget(self, action: #selector(leftBtnTapped), for: .touchUpInside)
     }
     
-    
     private func configureLabel() {
         contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
     }

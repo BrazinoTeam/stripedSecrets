@@ -9,6 +9,7 @@ import SwiftUI
 class LoadingVC: UIViewController {
     
     private var loadignViewModel: LoadingScreenViewModel = LoadingScreenViewModel()
+    private var auth = AuthTokenService.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +35,40 @@ class LoadingVC: UIViewController {
     }
     
     func loadTabBar() {
-        
-        let vc = TabBar()
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true)
+            Task {
+                do {
+                    try await auth.authenticate()
+                    checkToken()
+                    createUserIfNeededUses()
+                    let vc = TabBar()
+                    let navigationController = UINavigationController(rootViewController: vc)
+                    navigationController.modalPresentationStyle = .fullScreen
+                    present(navigationController, animated: true)
+                    navigationController.setNavigationBarHidden(true, animated: false)
+                } catch {
+                    print("Error: \(error.localizedDescription)")
+                }
+            }
+        }
+    
+    private func createUserIfNeededUses() {
+        if UserDef.shared.userID == nil {
+            let uuid = UUID().uuidString
+            Task {
+                do {
+                    let player = try await PostRequestService.shared.createPlayerUser(username: uuid)
+                    UserDef.shared.userID = player.id
+                } catch {
+                    print("Ошибка создания пользователя: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
+
+    private func checkToken() {
+        guard let token = auth.token else {
+            return
+        }
     }
     
 }

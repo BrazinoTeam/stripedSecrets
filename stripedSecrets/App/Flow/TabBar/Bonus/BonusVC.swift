@@ -58,9 +58,24 @@ class BonusVC: UIViewController {
 
     }
     
+    func updateScore() {
+        let payload = UpdatePayload(name: nil, balance: UserDef.shared.scorePoints)
+        PostRequestService.shared.updateData(id: UserDef.shared.userID!, payload: payload) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    print("Success")
+                case .failure(let failure):
+                    print("Error - \(failure.localizedDescription)")
+                }
+            }
+        }
+    }
+    
     @objc private func bonusTapped() {
         let randomBonus = bonusPoints.randomElement() ?? 0
         UserDef.shared.scorePoints += randomBonus
+        updateScore()
         presentModalView(points: randomBonus)
     }
     

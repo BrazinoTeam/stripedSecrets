@@ -58,9 +58,9 @@ class QuizOptionCell: UICollectionViewCell {
         }
         
         optionLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(contentView.snp.bottom).offset(-12)
-            make.left.right.bottom.equalToSuperview().inset(12)
-            make.height.equalTo(42)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-12.autoSize)
+            make.left.right.bottom.equalToSuperview().inset(12.autoSize)
+            make.height.equalTo(42.autoSize)
         }
     }
     
@@ -70,9 +70,9 @@ class QuizOptionCell: UICollectionViewCell {
          case 0:
              imageView.image = .imgCellOne
          case 1:
-             imageView.image = .imgCellTwo
-         case 2:
              imageView.image = .imgCellThree
+         case 2:
+             imageView.image = .imgCellTwo
          case 3:
              imageView.image = .imgCellFour
          default:

@@ -46,6 +46,13 @@
 		18766D192C3D48BC00990A51 /* QuizOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18766D182C3D48BC00990A51 /* QuizOptionCell.swift */; };
 		18766D1B2C3D534B00990A51 /* jsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 18766D1A2C3D534B00990A51 /* jsonData.json */; };
 		18B958222C3FE91100376650 /* CustomAchiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B958212C3FE91100376650 /* CustomAchiView.swift */; };
+		18D109592C41385F003CDB47 /* CustomRatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D109582C41385F003CDB47 /* CustomRatingCell.swift */; };
+		18D1095B2C413B40003CDB47 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1095A2C413B40003CDB47 /* RatingCell.swift */; };
+		18D1095D2C413B79003CDB47 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1095C2C413B79003CDB47 /* User.swift */; };
+		18D109602C413F39003CDB47 /* AuthTokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1095F2C413F39003CDB47 /* AuthTokenService.swift */; };
+		18D109622C413F45003CDB47 /* RatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D109612C413F45003CDB47 /* RatingService.swift */; };
+		18D109642C414049003CDB47 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D109632C414049003CDB47 /* PostService.swift */; };
+		18D109662C414056003CDB47 /* CreateRequestPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D109652C414056003CDB47 /* CreateRequestPayload.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +96,13 @@
 		18766D182C3D48BC00990A51 /* QuizOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizOptionCell.swift; sourceTree = "<group>"; };
 		18766D1A2C3D534B00990A51 /* jsonData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonData.json; sourceTree = "<group>"; };
 		18B958212C3FE91100376650 /* CustomAchiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAchiView.swift; sourceTree = "<group>"; };
+		18D109582C41385F003CDB47 /* CustomRatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRatingCell.swift; sourceTree = "<group>"; };
+		18D1095A2C413B40003CDB47 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
+		18D1095C2C413B79003CDB47 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		18D1095F2C413F39003CDB47 /* AuthTokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenService.swift; sourceTree = "<group>"; };
+		18D109612C413F45003CDB47 /* RatingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingService.swift; sourceTree = "<group>"; };
+		18D109632C414049003CDB47 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		18D109652C414056003CDB47 /* CreateRequestPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRequestPayload.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +122,9 @@
 			children = (
 				180F45632C38241B00102D48 /* RatingVC.swift */,
 				180F45652C38241F00102D48 /* RatingView.swift */,
+				18D1095A2C413B40003CDB47 /* RatingCell.swift */,
+				18D1095C2C413B79003CDB47 /* User.swift */,
+				18D109582C41385F003CDB47 /* CustomRatingCell.swift */,
 			);
 			path = Rating;
 			sourceTree = "<group>";
@@ -214,6 +231,7 @@
 		181173432C36E0AA009A90A2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				18D1095E2C413F21003CDB47 /* BackEnd */,
 				181173502C36EE05009A90A2 /* Extension + View.swift */,
 				181173522C36EE0F009A90A2 /* Double + Extension.swift */,
 				181173542C36EE18009A90A2 /* Font + Extension.swift */,
@@ -275,6 +293,17 @@
 				180F457A2C3831BD00102D48 /* HomeQuiz */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		18D1095E2C413F21003CDB47 /* BackEnd */ = {
+			isa = PBXGroup;
+			children = (
+				18D1095F2C413F39003CDB47 /* AuthTokenService.swift */,
+				18D109612C413F45003CDB47 /* RatingService.swift */,
+				18D109632C414049003CDB47 /* PostService.swift */,
+				18D109652C414056003CDB47 /* CreateRequestPayload.swift */,
+			);
+			name = BackEnd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,15 +393,20 @@
 				181173532C36EE0F009A90A2 /* Double + Extension.swift in Sources */,
 				182565832C3C101E005C982B /* HomeInfoVC.swift in Sources */,
 				180F456E2C38245000102D48 /* BonusView.swift in Sources */,
+				18D109622C413F45003CDB47 /* RatingService.swift in Sources */,
+				18D1095D2C413B79003CDB47 /* User.swift in Sources */,
 				181173512C36EE05009A90A2 /* Extension + View.swift in Sources */,
 				180F456C2C38244D00102D48 /* BonusVC.swift in Sources */,
 				182565812C3C07B7005C982B /* HomeCell.swift in Sources */,
+				18D1095B2C413B40003CDB47 /* RatingCell.swift in Sources */,
 				180F457E2C3831D500102D48 /* HomeQuizView.swift in Sources */,
 				182565852C3C1022005C982B /* HomeInfoView.swift in Sources */,
 				1811732C2C36E074009A90A2 /* AppDelegate.swift in Sources */,
 				180F45802C3831F200102D48 /* TigerModel.swift in Sources */,
 				180F45662C38241F00102D48 /* RatingView.swift in Sources */,
 				1811732E2C36E074009A90A2 /* SceneDelegate.swift in Sources */,
+				18D109662C414056003CDB47 /* CreateRequestPayload.swift in Sources */,
+				18D109602C413F39003CDB47 /* AuthTokenService.swift in Sources */,
 				18B958222C3FE91100376650 /* CustomAchiView.swift in Sources */,
 				180F456A2C38244000102D48 /* HomeView.swift in Sources */,
 				181173592C36EE65009A90A2 /* LoadingScreen.swift in Sources */,
@@ -386,9 +420,11 @@
 				180F45642C38241B00102D48 /* RatingVC.swift in Sources */,
 				180F45622C38241500102D48 /* AboutUsView.swift in Sources */,
 				18766D192C3D48BC00990A51 /* QuizOptionCell.swift in Sources */,
+				18D109642C414049003CDB47 /* PostService.swift in Sources */,
 				180F45722C38245B00102D48 /* ProfileView.swift in Sources */,
 				180F457C2C3831D100102D48 /* HomeQuizVC.swift in Sources */,
 				1811735D2C36EE84009A90A2 /* ProgressBarView.swift in Sources */,
+				18D109592C41385F003CDB47 /* CustomRatingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

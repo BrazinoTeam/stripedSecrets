@@ -70,6 +70,7 @@ class AboutUsView: UIView {
         
         imgTop.snp.makeConstraints { make in
             make.left.right.top.equalToSuperview()
+            make.height.equalTo(378.autoSize)
         }
         
         titleLabel.snp.makeConstraints { make in
@@ -80,7 +81,7 @@ class AboutUsView: UIView {
         bodyFieldInfo.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(32)
             make.left.right.equalToSuperview().inset(20)
-            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-80)
         }
         
     }

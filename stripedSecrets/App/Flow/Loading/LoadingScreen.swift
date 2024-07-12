@@ -11,9 +11,9 @@ struct LoadingScreen: View {
     
     var body: some View {
         VStack {
-            Text("Loading...")
-                .font(Font.custom("Aclonica-Regular", size: 14))
-                .foregroundStyle(.white)
+            Text("Loading".uppercased())
+                .font(Font.custom("SofiaSans-Black", size: 16))
+                .foregroundStyle(.cLightRed)
             ProgressBarView(currentProgress: loadingProgress, maxProgress: 260)
         }
         .padding(.bottom, 424.autoSize)

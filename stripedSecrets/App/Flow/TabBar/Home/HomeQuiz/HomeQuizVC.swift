@@ -107,12 +107,10 @@ class HomeQuizVC: UIViewController {
             isRightCountAnswers += 1
         }
         
-        // Перекрасить выбранную ячейку в зависимости от правильности ответа
         if let selectedCell = contentView.collectionView.cellForItem(at: selectedIndexPath) as? QuizOptionCell {
             selectedCell.setCorrect(isCorrect)
         }
         
-        // Найти ячейку с правильным ответом и изменить её цвет фона на зелёный
         for (index, variant) in variants.enumerated() {
             if variant.isRight {
                 if let cell = contentView.collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? QuizOptionCell {
@@ -121,16 +119,15 @@ class HomeQuizVC: UIViewController {
             }
         }
         
-        // Обновление цвета круга
         contentView.updateCircleColor(at: countAnswers, isCorrect: isCorrect, isCurrent: false)
         
-        // Переход к следующему вопросу через 2 секунды
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.contentView.btnAnswer.isEnabled = true
             self.countAnswers += 1
-            
+            if self.isRightCountAnswers == 10 {
+                  UserDef.shared.stealthyHunter = true
+              }
             if self.countAnswers >= 10 {
-                UserDef.shared.stealthyHunter = true
                 if self.isRightCountAnswers >= 6 {
                     self.navigateToQuizWinVC()
                     self.updateTigerTracker()

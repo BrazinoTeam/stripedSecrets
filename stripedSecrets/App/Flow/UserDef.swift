@@ -10,7 +10,7 @@ class UserDef {
     
     var scorePoints: Int {
         get {
-            return defaults.integer(forKey: "scorePoints", defaultValue: 1500)
+            return defaults.integer(forKey: "scorePoints", defaultValue: 0)
         }
         set {
             defaults.set(newValue, forKey: "scorePoints")

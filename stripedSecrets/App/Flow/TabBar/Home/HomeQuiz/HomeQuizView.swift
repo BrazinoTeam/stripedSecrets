@@ -190,7 +190,7 @@ class HomeQuizView: UIView {
         } else {
             collectionView.snp.makeConstraints { make in
                 make.top.equalTo(subTitleLabel.snp.bottom).offset(16.autoSize)
-                make.height.equalTo(296)
+                make.height.equalTo(300)
                 make.width.equalTo(360.autoSize)
                 make.centerX.equalToSuperview()
             }

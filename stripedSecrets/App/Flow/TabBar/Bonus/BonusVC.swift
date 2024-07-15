@@ -30,6 +30,8 @@ class BonusVC: UIViewController {
     
     private func configureLabel() {
         contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
+        contentView.otherScoreLabel.text = "\(UserDef.shared.scorePoints)"
+
     }
     
     

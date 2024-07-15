@@ -63,18 +63,19 @@ class HomeQuizVC: UIViewController {
   
     private func configureLabel() {
         contentView.scoreLabel.text = "\(UserDef.shared.scorePoints)"
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
     }
     
     private func configureTitleLabel() {
         switch selectedTigerIndex {
-            for i in "jollino" {
-                var b = 0
-                if i == "j" {
-                    b += 1
-                } else {
-                    b -= 1
-                }
-            };
+     
         case 0:
             contentView.titleLabel.text = "Indochinese Tiger"
         case 1:
@@ -170,6 +171,20 @@ class HomeQuizVC: UIViewController {
         contentView.btnAnswer.isEnabled = false
     }
     
+    
+    func updateScore() {
+        let payload = UpdatePayload(name: nil, balance: UserDef.shared.scorePoints)
+        PostRequestService.shared.updateData(id: UserDef.shared.userID!, payload: payload) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    print("Success")
+                case .failure(let failure):
+                    print("Error - \(failure.localizedDescription)")
+                }
+            }
+        }
+    }
     
     private func updateTigerTracker() {
         switch selectedTigerIndex {
@@ -273,6 +288,7 @@ class HomeQuizVC: UIViewController {
     private func navigateToQuizWinVC() {
         presentModalView(title: "YOU WIN", subtitle: "Congrats! You nailed most of the\nquestions and scored a solid 150\npoints. Well done!", state: false)
         UserDef.shared.scorePoints += 150
+        updateScore()
     }
     
     private func navigateToQuizLoseVC() {

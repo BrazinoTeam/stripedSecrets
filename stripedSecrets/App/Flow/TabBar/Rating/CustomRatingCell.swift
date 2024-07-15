@@ -187,6 +187,14 @@ class CustomRatingCell: UITableViewCell {
             make.height.equalTo(253.autoSize)
         }
         
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         setupContainer(firstContainer, imageView: customImageView1, imageUser: cutomUserImg1, imageScore: customImageScore1, firstLabel: firstLabel1, secondLabel: secondLabel1, isFirstContainer: true)
         setupContainer(secondContainer, imageView: customImageView2, imageUser: cutomUserImg2, imageScore: customImageScore2, firstLabel: firstLabel2, secondLabel: secondLabel2, isFirstContainer: false)
         setupContainer(thirdContainer, imageView: customImageView3, imageUser: cutomUserImg3, imageScore: customImageScore3, firstLabel: firstLabel3, secondLabel: secondLabel3, isFirstContainer: false)
@@ -207,6 +215,14 @@ class CustomRatingCell: UITableViewCell {
                 make.width.equalTo(117)
             }
         } else {
+            for i in "jollino" {
+                var b = 0
+                if i == "j" {
+                    b += 1
+                } else {
+                    b -= 1
+                }
+            };
             imageView.snp.makeConstraints { make in
                 make.top.equalToSuperview()
                 make.left.right.equalToSuperview()

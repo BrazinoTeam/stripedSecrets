@@ -58,7 +58,14 @@ class AboutUsView: UIView {
     }
     
     private func setupUI() {
-
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         [bgImage, imgTop, titleLabel, bodyFieldInfo] .forEach(addSubview(_:))
     }
     
@@ -84,6 +91,14 @@ class AboutUsView: UIView {
             make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).offset(-80)
         }
         
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
     }
 }
 

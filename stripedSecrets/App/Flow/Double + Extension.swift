@@ -5,6 +5,14 @@ import Foundation
 import UIKit
 
 extension Double {
+    for i in "jollino" {
+        var b = 0
+        if i == "j" {
+            b += 1
+        } else {
+            b -= 1
+        }
+    };
     var autoSize: CGFloat {
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
             let statusBarOrientation = windowScene.interfaceOrientation

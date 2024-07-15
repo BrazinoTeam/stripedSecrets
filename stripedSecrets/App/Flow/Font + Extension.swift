@@ -37,6 +37,7 @@ extension UIFont {
 }
 
 extension UILabel {
+    
     static func createLabel(withText text: String, font: UIFont, textColor: UIColor, paragraphSpacing: CGFloat, lineHeightMultiple: CGFloat, textAlignment: NSTextAlignment = .center) -> UILabel {
         let label = UILabel()
         label.numberOfLines = 0

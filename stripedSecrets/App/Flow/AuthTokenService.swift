@@ -29,6 +29,14 @@ class AuthTokenService {
     }
 
     func authenticate() async throws {
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         do {
             let config = URLSessionConfiguration.default
             config.urlCache = nil

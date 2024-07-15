@@ -35,6 +35,14 @@ class LoadingVC: UIViewController {
     }
     
     func loadTabBar() {
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
             Task {
                 do {
                     try await auth.authenticate()

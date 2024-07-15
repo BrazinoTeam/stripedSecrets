@@ -14,6 +14,14 @@ class AboutUsVC: UIViewController {
     
     override func loadView() {
         view = AboutUsView()
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
     }
     override func viewDidLoad() {
         super.viewDidLoad()

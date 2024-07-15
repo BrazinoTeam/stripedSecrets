@@ -80,6 +80,14 @@ class RatingCell: UITableViewCell {
     
     private func setUpConstraints(){
         
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         ratingView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(4)
             make.left.right.equalToSuperview().inset(20)

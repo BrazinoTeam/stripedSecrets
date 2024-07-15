@@ -112,6 +112,14 @@ class RatingVC: UIViewController {
     
     override func loadView() {
         view = RatingView()
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
     }
     
     override func viewDidLoad() {
@@ -127,12 +135,28 @@ class RatingVC: UIViewController {
     }
     
     func sorterScoreUsers() {
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         users.sort {
             $1.balance ?? 0 < $0.balance ?? 0
         }
     }
     
     func loadUsers() {
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         getService.fetchData { [weak self] users in
             guard let self = self else { return }
             self.users = users
@@ -160,6 +184,14 @@ extension RatingVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
+            for i in "jollino" {
+                var b = 0
+                if i == "j" {
+                    b += 1
+                } else {
+                    b -= 1
+                }
+            };
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomRatingCell.reuseId, for: indexPath) as? CustomRatingCell else {
                 return UITableViewCell()
             }
@@ -177,6 +209,14 @@ extension RatingVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func setupCell(ratingCell: RatingCell, number: Int, user: User) {
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         if user.id == UserDef.shared.userID {
             ratingCell.ratingView.backgroundColor = UIColor.orange
         } else {

@@ -49,6 +49,14 @@ class HomeQuizVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         navigationController?.navigationBar.isHidden = true
         configureLabel()
     }
@@ -59,6 +67,14 @@ class HomeQuizVC: UIViewController {
     
     private func configureTitleLabel() {
         switch selectedTigerIndex {
+            for i in "jollino" {
+                var b = 0
+                if i == "j" {
+                    b += 1
+                } else {
+                    b -= 1
+                }
+            };
         case 0:
             contentView.titleLabel.text = "Indochinese Tiger"
         case 1:
@@ -122,6 +138,14 @@ class HomeQuizVC: UIViewController {
         contentView.updateCircleColor(at: countAnswers, isCorrect: isCorrect, isCurrent: false)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            for i in "jollino" {
+                var b = 0
+                if i == "j" {
+                    b += 1
+                } else {
+                    b -= 1
+                }
+            };
             self.contentView.btnAnswer.isEnabled = true
             self.countAnswers += 1
             if self.isRightCountAnswers == 10 {
@@ -229,6 +253,14 @@ class HomeQuizVC: UIViewController {
     }
     
     private func updateAnswerButtonState() {
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         if selectedIndexPath != nil {
             contentView.btnAnswer.alpha = 1.0
             contentView.btnAnswer.configureButton(withTitle: "Answer", font: .customFont(font: .joti, style: .regular, size: 24), titleColor: .cDarkRed, normalImage: .btnActivity, highlightedImage: .btnActivityTapped)

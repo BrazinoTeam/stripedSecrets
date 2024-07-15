@@ -21,8 +21,8 @@ struct LoadingScreen: View {
         .backgroundImage(image: .bgStart)
         .onChange(of: loadignViewModel.isAnimating) { animating in
             if animating {
-                withAnimation(.linear(duration: 2)) {
-                    loadingProgress = 250
+                withAnimation(.linear(duration: 2.5)) {
+                    loadingProgress = 260
                 }
             }
         }

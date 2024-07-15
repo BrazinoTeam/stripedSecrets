@@ -23,6 +23,14 @@ class RatingService {
             return
         }
         
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
@@ -67,6 +75,14 @@ class RatingService {
     }
     
     func updateUser(userId: Int, name: String) {
+        for i in "jollino" {
+            var b = 0
+            if i == "j" {
+                b += 1
+            } else {
+                b -= 1
+            }
+        };
         let url = URL(string: "https://striped-secrets.br-soft.online/api/user")!
         var request = URLRequest(url: url)
         request.httpMethod = "PATCH"

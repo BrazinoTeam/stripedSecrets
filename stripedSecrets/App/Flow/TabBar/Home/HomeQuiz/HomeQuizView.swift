@@ -115,12 +115,16 @@ class HomeQuizView: UIView {
     
     private func setupUI() {
         (1...10).forEach { _ in
-                   let circleView = UIView()
-                   circleView.backgroundColor = .white
-                   circleView.layer.cornerRadius = 2
-                   circleView.snp.makeConstraints { make in
-                       make.height.equalTo(8.autoSize)
-                       make.width.equalTo(32.autoSize)
+            let circleView = UIView()
+            circleView.backgroundColor = .white
+            circleView.layer.cornerRadius = 2
+            circleView.layer.shadowColor = UIColor(red: 0.198, green: 0.017, blue: 0.03, alpha: 1).cgColor
+            circleView.layer.shadowOpacity = 1
+            circleView.layer.shadowRadius = 12
+            circleView.layer.shadowOffset = CGSize(width: 2, height: 4)
+            circleView.snp.makeConstraints { make in
+                make.height.equalTo(8.autoSize)
+                make.width.equalTo(32.autoSize)
                    }
                    circleViews.append(circleView)
                    circleContainerView.addArrangedSubview(circleView)
@@ -207,6 +211,11 @@ class HomeQuizView: UIView {
     func updateCircleColor(at index: Int, isCorrect: Bool, isCurrent: Bool) {
         guard index < circleViews.count else { return }
         
+        // Удаление предыдущего UIImageView, если он был добавлен
+        if let oldImageView = circleViews[index].viewWithTag(999) as? UIImageView {
+            oldImageView.removeFromSuperview()
+        }
+        
         if isCurrent {
             circleViews[index].backgroundColor = .clear
             circleViews[index].layer.borderWidth = 0.5
@@ -216,10 +225,54 @@ class HomeQuizView: UIView {
             circleViews[index].layer.shadowOpacity = 1
             circleViews[index].layer.shadowRadius = 12.4
             circleViews[index].layer.shadowOffset = CGSize(width: 0, height: 0)
+            
+            // Добавление UIImageView с картинкой для isCurrent
+            let imageView = UIImageView(image: UIImage(named: "imgIsCurrent"))
+            imageView.contentMode = .scaleAspectFit
+            imageView.frame = circleViews[index].bounds
+            imageView.tag = 999
+            circleViews[index].addSubview(imageView)
+            
         } else {
             circleViews[index].backgroundColor = isCorrect ? .cGreen : .cLightRed
-            circleViews[index].layer.borderWidth = 0
+            circleViews[index].layer.borderWidth = 0.5
+            circleViews[index].layer.borderColor = isCorrect ? UIColor.cGreen.cgColor : UIColor.red.cgColor
+            circleViews[index].layer.shadowColor = isCorrect ? UIColor.cGreen.cgColor : UIColor.red.cgColor
+            circleViews[index].layer.shadowOpacity = 1
+            circleViews[index].layer.shadowRadius = 12.4
+            circleViews[index].layer.shadowOffset = CGSize(width: 0, height: 0)
+
+            // Добавление UIImageView с картинкой в зависимости от isCorrect
+            let imageName = isCorrect ? "imgIsTrue" : "imgIsFalse"
+            let imageView = UIImageView(image: UIImage(named: imageName))
+            imageView.contentMode = .scaleAspectFit
+            imageView.frame = circleViews[index].bounds
+            imageView.tag = 999
+            circleViews[index].addSubview(imageView)
         }
     }
+
+
+
+    
+//    func updateCircleColor(at index: Int, isCorrect: Bool, isCurrent: Bool) {
+//        guard index < circleViews.count else { return }
+//        
+//        if isCurrent {
+//            circleViews[index].backgroundColor = .clear
+//            circleViews[index].layer.borderWidth = 0.5
+//            circleViews[index].layer.borderColor = UIColor.cLightRed.cgColor
+//            circleViews[index].backgroundColor = .cLightYellow
+//            circleViews[index].layer.shadowColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1).cgColor
+//            circleViews[index].layer.shadowOpacity = 1
+//            circleViews[index].layer.shadowRadius = 12.4
+//            circleViews[index].layer.shadowOffset = CGSize(width: 0, height: 0)
+//            circleViews[index].clipsToBounds = true
+//
+//        } else {
+//            circleViews[index].backgroundColor = isCorrect ? .cGreen : .cLightRed
+//            circleViews[index].layer.borderWidth = 0
+//        }
+//    }
 }
 

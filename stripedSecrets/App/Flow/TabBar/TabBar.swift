@@ -27,25 +27,32 @@ final class TabBar: UITabBarController {
         self.updateSelectedButton(sender.tag)
         self.selectedIndex = sender.tag
     }
-
-    private lazy var customBar: UIStackView = {
-        $0.axis = .horizontal
-        $0.distribution = .equalSpacing
-        $0.alignment = .center
-        $0.backgroundColor = .black.withAlphaComponent(0.8)
-        $0.frame = CGRect(x: 0, y: view.frame.height - 128.autoSize, width: view.frame.width, height: 128.autoSize)
-        $0.layer.shadowColor = UIColor.black.withAlphaComponent(0.6).cgColor
-        $0.layer.shadowOpacity = 1
-        $0.layer.shadowRadius = 12
-        $0.layer.shadowOffset = CGSize(width: 0, height: -4)
-        $0.addArrangedSubview(btn1)
-        $0.addArrangedSubview(btn2)
-        $0.addArrangedSubview(btn3)
-        $0.addArrangedSubview(btn4)
-        $0.addArrangedSubview(btn5)
-        return $0
-    }(UIStackView())
     
+    private lazy var customBar: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.alignment = .center
+        stackView.backgroundColor = .black.withAlphaComponent(0.8)
+        stackView.frame = CGRect(x: 0, y: view.frame.height - 128.autoSize, width: view.frame.width, height: 128.autoSize)
+        stackView.layer.shadowColor = UIColor.black.withAlphaComponent(0.6).cgColor
+        stackView.layer.shadowOpacity = 1
+        stackView.layer.shadowRadius = 12
+        stackView.layer.shadowOffset = CGSize(width: 0, height: -4)
+        
+        // Настройка отступов
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.layoutMargins = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 4)
+        
+        stackView.addArrangedSubview(btn1)
+        stackView.addArrangedSubview(btn2)
+        stackView.addArrangedSubview(btn3)
+        stackView.addArrangedSubview(btn4)
+        stackView.addArrangedSubview(btn5)
+        
+        return stackView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

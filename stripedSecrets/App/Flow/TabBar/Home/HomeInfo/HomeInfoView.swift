@@ -59,7 +59,7 @@ class HomeInfoView: UIView {
     }()
     
     private (set) var titleLabel: UILabel = {
-        let label = UILabel.createLabel(withText: "Indochinese Tiger", font: .customFont(font: .joti, style: .regular, size: 20), textColor: .cLightYellow, paragraphSpacing: 1, lineHeightMultiple: 1)
+        let label = UILabel.createLabel(withText: "Indochinese Tiger", font: .customFont(font: .joti, style: .regular, size: 28), textColor: .cLightYellow, paragraphSpacing: 1, lineHeightMultiple: 1)
         label.textAlignment = .center
         label.numberOfLines = 0
         return label

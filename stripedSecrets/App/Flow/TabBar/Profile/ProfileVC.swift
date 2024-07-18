@@ -171,7 +171,7 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
             
             viewContainer.snp.makeConstraints { make in
                 make.centerX.equalToSuperview()
-                make.centerY.equalToSuperview()
+                make.centerY.equalToSuperview().offset(-60)
                 make.height.equalTo(296)
                 make.width.equalTo(312)
             }
